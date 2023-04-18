@@ -2,9 +2,9 @@
 
 // Establish a database connection
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database_name";
+$username = "blablaadmin";
+$password = "bla123bla456";
+$dbname = "prepit_users";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
