@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Check if user exists
   if (mysqli_num_rows($result) == 1) {
     // User authenticated, redirect to home page
-    header("Location: home.php");
+    header("Location: home.html");
     exit();
   } else {
     // User authentication failed, show error message
