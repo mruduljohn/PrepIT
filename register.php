@@ -17,9 +17,28 @@ if (!$conn) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
   // Get form data
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  $email = $_POST['email'];
+  $username = mysqli_real_escape_string($conn, $_POST['username']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $confirm_password = mysqli_real_escape_string($conn, $_POST['confirm_password']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+  // Check if password and confirm password match
+  if ($password !== $confirm_password) {
+    die("Error: Passwords do not match");
+  }
+
+  // Check if email is valid
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    die("Error: Invalid email format");
+  }
+
+  // Check if username or email already exists in database
+  $sql = "SELECT * FROM users WHERE username='$username' OR email='$email'";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+    die("Error: Username or email already exists");
+  }
 
   // Insert data into database
   $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
@@ -40,4 +59,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 mysqli_close($conn);
 
 ?>
-
