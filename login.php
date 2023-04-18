@@ -16,27 +16,36 @@ if (!$conn) {
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
-  // Get form data
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  // Check if form data is not empty
+  if (!empty($_POST['username']) && !empty($_POST['password'])) {
 
-  // Query the database
-  $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-  $result = mysqli_query($conn, $sql);
+    // Get form data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-  // Check if user exists
-  if (mysqli_num_rows($result) == 1) {
-    // User authenticated, redirect to home page
-    header("Location: home.php");
-    exit();
+    // Query the database
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+
+    // Check if user exists
+    if (mysqli_num_rows($result) == 1) {
+      // User authenticated, redirect to home page
+      header("Location: home.php");
+      exit();
+    } else {
+      // User authentication failed, show error message
+      echo "Invalid username or password.";
+    }
+
   } else {
-    // User authentication failed, show error message
-    echo "Invalid username or password.";
+    // Form data is empty, show error message
+    echo "Please enter a username and password.";
   }
 
 }
 
 mysqli_close($conn);
+
 
 ?>
 
