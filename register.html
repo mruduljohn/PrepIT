@@ -4,13 +4,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<title>Registration</title>-->
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles2.css">
    </head>
 <body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
   <div class="wrapper">
-    <h2>Registration</h2>
+    
+    
     <form method="POST" action="register.php">
+      <h3>Registration</h3>
       <div class="input-box">
         <input type="text" name="username" placeholder="Enter your name" required>
       </div>
@@ -25,13 +34,13 @@
       </div>
       <div class="policy">
         <input type="checkbox">
-        <h3>I accept all terms & condition</h3>
+        <h5>I accept all terms & condition</h5>
       </div>
-      <div class="input-box button">
+      <div class="regist">
         <input type="Submit" value="Register Now">
       </div>
       <div class="text">
-        <h3>Already have an account? <a href="login.html">Login now</a></h3>
+        <h5>Already have an account? <a href="login.html">Login now</a></h5>
       </div>
     </form>
   </div>
