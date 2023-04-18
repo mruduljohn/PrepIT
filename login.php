@@ -2,9 +2,9 @@
 
 // Establish a database connection
 $servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database_name";
+$username = "blablaadmin";
+$password = "bla123bla456";
+$dbname = "prepit_users";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -16,9 +16,15 @@ if (!$conn) {
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
+  // Check if username and password are provided
+  if (empty($_POST['username']) || empty($_POST['password'])) {
+    echo "Please enter username and password.";
+    exit();
+  }
+
   // Get form data
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $username = mysqli_real_escape_string($conn, $_POST['username']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
 
   // Query the database
   $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
@@ -27,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Check if user exists
   if (mysqli_num_rows($result) == 1) {
     // User authenticated, redirect to home page
-    header("Location: home.php");
+    header("Location: home.html");
     exit();
   } else {
     // User authentication failed, show error message
@@ -39,4 +45,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 mysqli_close($conn);
 
 ?>
-
