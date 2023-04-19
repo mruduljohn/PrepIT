@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $password = mysqli_real_escape_string($conn, $_POST['password']);
 
   // Query the database
-  $sql = "SELECT * FROM users WHERE email='$username' AND password='$password'";
+  $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   $result = mysqli_query($conn, $sql);
 
   // Check if user exists
