@@ -47,7 +47,7 @@
     // Check if user was added successfully
     if ($result) {
       // User added, redirect to login page
-      header("Location: login.php");
+      header("Location: login.html");
       exit();
     } else {
       // User add failed, show error message
