@@ -89,43 +89,23 @@ font-weight: 300;
 color: #e5e5e5;
 }
 button{
-margin-top: 25px;
+margin-top: 40px;
 width: 100%;
-background-color: #ffffff;
-color: #080710;
+background-color: #0b4a8e;
+color: #eceaf5;
 padding: 15px 0;
 font-size: 18px;
 font-weight: 600;
 border-radius: 5px;
 cursor: pointer;
 }
-.social{
-margin-top: 30px;
-display: flex;
-}
-.social div{
-background: red;
-width: 150px;
-border-radius: 3px;
-padding: 5px 10px 10px 5px;
-background-color: rgba(255,255,255,0.27);
-color: #eaf0fb;
-text-align: center;
-}
-.social div:hover{
-background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-margin-left: 25px;
-}
-.social i{
-margin-right: 4px;
-}
+
 .or{
     text-decoration: none;
     margin-left: 185px;
     padding-right: 10px;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
 }
