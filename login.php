@@ -17,17 +17,17 @@ if (!$conn) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
   // Check if username and password are provided
-  if (empty($_POST['email']) || empty($_POST['password'])) {
-    echo "Please enter email and password.";
+  if (empty($_POST['username']) || empty($_POST['password'])) {
+    echo "Please enter username and password.";
     exit();
   }
 
   // Get form data
-  $username = mysqli_real_escape_string($conn, $_POST['email']);
+  $username = mysqli_real_escape_string($conn, $_POST['username']);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
 
   // Query the database
-  $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+  $sql = "SELECT * FROM users WHERE email='$username' AND password='$password'";
   $result = mysqli_query($conn, $sql);
 
   // Check if user exists
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
   } else {
     // User authentication failed, show error message
-    echo "Invalid email or password.";
+    echo "Invalid username or password.";
   }
 
 }
