@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $admin_password = mysqli_real_escape_string($conn, $_POST['admin_password']);
 
     // Query the database
-    $sql = "SELECT * FROM admin_users WHERE admin_username='$admin_username' AND admin_password='$admin_password'";
+    $sql = "SELECT * FROM admin_users WHERE username='$admin_username' AND password='$admin_password'";
     $result = mysqli_query($conn, $sql);
 
     // Check for query errors
