@@ -30,6 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "SELECT * FROM admin_users WHERE admin_username='$admin_username' AND admin_password='$admin_password'";
     $result = mysqli_query($conn, $sql);
 
+    // Check for query errors
+    if (!$result) {
+        die("Query error: " . mysqli_error($conn));
+    }
+
     // Check if admin exists
     if (mysqli_num_rows($result) == 1) {
         // Admin authenticated, set session variable
