@@ -2,8 +2,8 @@
 // Start a session
 session_start();
 
-// Unset all session variables
-$_SESSION = array();
+// Clear all session variables
+session_unset();
 
 // Destroy the session
 session_destroy();
