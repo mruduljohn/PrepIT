@@ -5,7 +5,7 @@ session_start();
 $servername = "localhost";
 $username = "blablaadmin";
 $password = "bla123bla456";
-$dbname = "admin_users";
+$dbname = "prepit_users";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
