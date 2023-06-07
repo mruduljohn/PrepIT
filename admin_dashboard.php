@@ -59,6 +59,7 @@ if (isset($_GET['logout'])) {
 <body>
     <div class="container">
         <h1>Welcome, <?php echo $_SESSION['admin_username']; ?></h1>
+        <?php include 'upload_notes.php'; ?>
 
         <!-- Add your dashboard content here -->
 

@@ -1,54 +1,17 @@
 <?php
-// Check if the user is an admin
-// You can implement your own authentication and authorization logic here
-
 session_start();
 
 // Check if the user is logged in
-if (!isset($_SESSION['username'])) {
-    // Redirect to login page or display an error message
+if (!isset($_SESSION['admin_username'])) {
+    // Redirect to the admin login page
     header('Location: admin_login.php');
     exit();
 }
-
-// Check if the logged-in user is an admin
-$isAdmin = false; // Assuming the admin user is stored in a separate table
-
-// Establish a database connection
-$servername = "localhost";
-$username = "blablaadmin";
-$password = "bla123bla456";
-$dbname = "prepit_users";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Check if the logged-in user is an admin
-$username = $_SESSION['admin_username'];
-
-$sql = "SELECT * FROM admin_users WHERE username='$username'";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) == 1) {
-    $isAdmin = true;
-}
-
-if (!$isAdmin) {
-    // Redirect to a login page or display an error message
-    header('Location: admin_login.php');
-    exit();
-}
-
-// Rest of the code...
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if a file is selected
-    if ($_FILES['pdf_file']['error'] == UPLOAD_ERR_NO_FILE) {
+    if (!isset($_FILES['pdf_file']) || $_FILES['pdf_file']['error'] == UPLOAD_ERR_NO_FILE) {
         echo "Please select a PDF file.";
         exit();
     }
@@ -67,19 +30,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    // Move the uploaded file to a specific directory
-    $upload_directory = "uploads/";
-    $file_path = $upload_directory . $file_name;
-    move_uploaded_file($file_tmp, $file_path);
+    // Database configuration
+    $servername = "localhost";
+    $username = "blablaadmin";
+    $password = "bla123bla456";
+    $dbname = "prepit_notes";
 
-    // Store file details in the database
-    $sql = "INSERT INTO notes (file_name, file_path) VALUES ('$file_name', '$file_path')";
-    if (mysqli_query($conn, $sql)) {
-        echo "File uploaded successfully.";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    // Create a new connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
     }
-}
 
-mysqli_close($conn);
+    // Prepare the data for insertion
+    $file_name = mysqli_real_escape_string($conn, $file_name);
+    $file_path = "uploads/" . $file_name;
+
+    // Move the uploaded file to the desired directory
+    if (move_uploaded_file($file_tmp, $file_path)) {
+        // Insert the file details into the database
+        $sql = "INSERT INTO notes (file_name, file_path) VALUES ('$file_name', '$file_path')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "File uploaded successfully.";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+    } else {
+        echo "Error uploading file.";
+    }
+
+    // Close the database connection
+    mysqli_close($conn);
+}
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Notes</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <h1>Upload Notes</h1>
+
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+        <label for="pdf_file">Select PDF file:</label>
+        <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" required>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
