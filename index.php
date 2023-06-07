@@ -36,5 +36,10 @@
     <h1><a href="PMOS.html" class="Pass_mark">Pass Marks Oriented Study</a></h1>
 </div>
 
+<!-- Admin Login Button -->
+<div class="admin-login-btn">
+    <a href="admin_login.php" class="admin-btn">Admin Login</a>
+</div>
+
 </body>
 </html>
