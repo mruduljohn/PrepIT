@@ -1,26 +1,28 @@
 <?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
 session_start();
 
-// Establish a database connection
-$servername = "localhost";
-$username = "blablaadmin";
-$password = "bla123bla456";
-$dbname = "prepit_users";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+// Check if the user is already logged in
+if (isset($_SESSION['admin_username'])) {
+    // Redirect to admin dashboard if already logged in
+    header("Location: admin_dashboard.php");
+    exit();
 }
 
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "blablaadmin";
+    $password = "bla123bla456";
+    $dbname = "prepit_users";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     // Check if username and password are provided
     if (empty($_POST['admin_username']) || empty($_POST['admin_password'])) {
         echo "Please enter username and password.";
@@ -52,8 +54,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Admin authentication failed, show error message
         echo "Invalid username or password.";
     }
+
+    mysqli_close($conn);
 }
-
-mysqli_close($conn);
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <h1>Admin Login</h1>
+
+    <!-- Admin Login Form -->
+    <form action="admin_login.php" method="POST">
+        <label for="admin_username">Username:</label>
+        <input type="text" id="admin_username" name="admin_username" required>
+
+        <label for="admin_password">Password:</label>
+        <input type="password" id="admin_password" name="admin_password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
