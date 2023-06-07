@@ -7,7 +7,7 @@ session_start();
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     // Redirect to login page or display an error message
-    header('Location: login.html');
+    header('Location: admin_login.php');
     exit();
 }
 
@@ -18,7 +18,7 @@ $isAdmin = false; // Assuming the admin user is stored in a separate table
 $servername = "localhost";
 $username = "blablaadmin";
 $password = "bla123bla456";
-$dbname = "admin_users";
+$dbname = "prepit_users";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -28,7 +28,7 @@ if (!$conn) {
 }
 
 // Check if the logged-in user is an admin
-$username = $_SESSION['username'];
+$username = $_SESSION['admin_username'];
 
 $sql = "SELECT * FROM admin_users WHERE username='$username'";
 $result = mysqli_query($conn, $sql);
@@ -39,9 +39,11 @@ if (mysqli_num_rows($result) == 1) {
 
 if (!$isAdmin) {
     // Redirect to a login page or display an error message
-    header('Location: login.html');
+    header('Location: admin_login.php');
     exit();
 }
+
+// Rest of the code...
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
