@@ -29,11 +29,11 @@
 </div>
 
 <div class="Full_mark">
-    <h1><a href="FMOS.html" class="Full_mark">Full Marks Oriented Study</a></h1>
+    <h1><a href="FMS.php" class="Full_mark">Full Marks Oriented Study</a></h1>
 </div>
 
 <div class="Pass_mark">
-    <h1><a href="PMOS.html" class="Pass_mark">Pass Marks Oriented Study</a></h1>
+    <h1><a href="pms.php" class="Pass_mark">Pass Marks Oriented Study</a></h1>
 </div>
 
 <!-- Admin Login Button -->
