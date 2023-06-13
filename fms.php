@@ -5,14 +5,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <title>PHP Web Page</title>
-    <link rel="stylesheet" href="pms2.css" type="text/css">
+    <link rel="stylesheet" href="fms2.css" type="text/css">
     
 </head>
 <body>
 <div class="Full_mark">
 
     
-    <div><h1><a class="Full_mark">PASS MARK ORIENTED </a></h1></div>
+    <div><h1><a class="Full_mark">FULL MARK ORIENTED </a></h1></div>
     <div class="container">
 
     <div class="dropdown">
