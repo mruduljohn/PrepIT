@@ -30,6 +30,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
+    // Folder mapping based on the first three letters of the file name
+    $folderMapping = array(
+        'F3L' => 'Full_Mark/Sem_3/Latt',
+        'P3L' => 'Pass_Mark/Sem_3/Latt',
+        'ghi' => 'folder3'
+        // Add more mappings as needed
+    );
+
+    // Extract the first three letters of the file name
+    $prefix = substr($file_name, 0, 3);
+
+    // Check if the prefix matches any mapping
+    if (isset($folderMapping[$prefix])) {
+        $folder = $folderMapping[$prefix];
+    } else {
+        $folder = 'default_folder'; // Default folder if no specific match is found
+    }
+
     // Database configuration
     $servername = "localhost";
     $username = "blablaadmin";
@@ -46,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Prepare the data for insertion
     $file_name = mysqli_real_escape_string($conn, $file_name);
-    $file_path = "uploads/" . $file_name;
+    $file_path = "uploads/" . $folder . "/" . $file_name;
 
     // Move the uploaded file to the desired directory
     if (move_uploaded_file($file_tmp, $file_path)) {
@@ -66,6 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_close($conn);
 }
 ?>
+
+<!-- Rest of the HTML code remains the same -->
+
+
 
 <!DOCTYPE html>
 <html>
