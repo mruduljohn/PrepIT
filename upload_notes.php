@@ -71,31 +71,58 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Upload Notes</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
+        .container {
+            max-width: 500px;
+            margin-top: 50px;
+        }
+
+        .upload-form {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         .back-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            color: bla;
-            background-color: white;
-            padding: 5px;
+            color: #ffffff;
+            background-color: #343a40;
+            padding: 10px 20px;
             font-weight: bold;
-            border-radius: 20%;
-           
+            border-radius: 30px;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>Upload Notes</h1>
+    <div class="container">
+        <div class="upload-form">
+            <h1 class="upload-title">Upload Notes</h1>
 
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
-        <label for="pdf_file">Select PDF file:</label>
-        <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" required>
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="pdf_file" class="form-label">Select PDF file:</label>
+                    <input type="file" class="form-control" id="pdf_file" name="pdf_file" accept=".pdf" required>
+                </div>
 
-        <button type="submit">Upload</button>
-    </form>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+            </form>
+        </div>
 
-    <a class="back-button" href="admin_dashboard.php">Back</a>
+        <a class="back-button" href="admin_dashboard.php">Back</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
