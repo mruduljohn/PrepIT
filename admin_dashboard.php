@@ -21,59 +21,72 @@ if (isset($_GET['logout'])) {
 <html>
 <head>
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f1f1f1;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            height: 250px;
+            width: 500px;
+            border: none;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 100px;
-            text-align: center;
+            background-color: #ffffff;
         }
 
-        h1 {
-            margin-bottom: 30px;
+        .card-title {
             color: #333333;
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        .upload-link {
-            display: block;
-            margin-top: 20px;
-            color: #4CAF50;
-            text-decoration: none;
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
         }
 
-        .upload-link:hover {
-            color: #45a049;
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
         }
 
-        .logout-link {
-            display: block;
-            margin-top: 20px;
-            color: #4CAF50;
-            text-decoration: none;
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
         }
 
-        .logout-link:hover {
-            color: #45a049;
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome, <?php echo $_SESSION['admin_username']; ?></h1>
+        <div class="card">
+            <div class="card-body text-center">
+                <h1 class="card-title">Welcome, <?php echo $_SESSION['admin_username']; ?></h1>
 
-        <a href="upload_notes.php" class="upload-link">Upload Notes</a>
+                <div class="text-center">
+                    <a href="upload_notes.php" class="btn btn-primary btn-lg mt-4">Upload Notes</a>
+                </div>
 
-        <a href="?logout=1" class="logout-link">Logout</a>
+                <div class="text-center">
+                    <a href="?logout=1" class="btn btn-danger btn-lg mt-3">Logout</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
