@@ -87,8 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!-- Rest of the HTML code remains the same -->
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -138,6 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="button" class="btn btn-secondary" onclick="previewPDF()">Preview</button>
                 </div>
             </form>
         </div>
@@ -145,6 +144,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <a class="back-button" href="admin_dashboard.php">Back</a>
     </div>
 
+    <script>
+        // JavaScript function to handle the preview button click
+        function previewPDF() {
+            // Get the selected file
+            var fileInput = document.getElementById('pdf_file');
+            var file = fileInput.files[0];
+
+            // Check if a file is selected
+            if (!file) {
+                alert("Please select a PDF file.");
+                return;
+            }
+
+            // Create a new FileReader object
+            var reader = new FileReader();
+
+            // Set up the FileReader onload event
+            reader.onload = function (e) {
+                // Create a new window to display the PDF preview
+                var previewWindow = window.open();
+                previewWindow.document.open();
+
+                // Display the PDF content in the new window
+                previewWindow.document.write('<embed width="100%" height="100%" src="' + e.target.result + '" type="application/pdf" />');
+
+                previewWindow.document.close();
+            };
+
+            // Read the selected file as Data URL
+            reader.readAsDataURL(file);
+        }
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
