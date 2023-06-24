@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Error: Invalid email format");
     }
 
-    // Check if username or email already exists in database
+    // Check if username or email already exists in the database
     $sql = "SELECT * FROM users WHERE username='$username' OR email='$email'";
     $result = mysqli_query($conn, $sql);
 
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert data into database
+    // Insert data into the database
     $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$hashed_password', '$email')";
     $result = mysqli_query($conn, $sql);
 
@@ -60,3 +60,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 mysqli_close($conn);
 
 ?>
+

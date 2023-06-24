@@ -1,4 +1,5 @@
 <?php
+
 // Establish a database connection
 $servername = "localhost";
 $username = "blablaadmin";
