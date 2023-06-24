@@ -50,22 +50,22 @@
             $username = "blablaadmin";
             $password = "bla123bla456";
             $dbname = "prepit_notes";
-
+            
             // Create a new connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
-
+            
             // Check connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
-
+            
             // Function to generate dynamic content based on the subject and type
             function generateContent($conn, $subject, $type)
             {
                 // Prepare and execute a query to retrieve the content for the selected subject and type
-                $query = "SELECT file_name, file_path FROM notes WHERE subject = '$subject' AND type = '$type'";
+                $query = "SELECT file_name, file_path FROM notes WHERE subject = '$subject' AND file_type = '$type'"; // Updated column name 'file_type'
                 $result = mysqli_query($conn, $query);
-
+            
                 // Process the query result and generate the content
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -77,16 +77,17 @@
                     echo "No $type available for this subject.";
                 }
             }
-
+            
             // Retrieve the subject from the query parameter
             $subject = $_GET['subject'];
-
+            
             // Call the generateContent function with the selected subject and type 'Notes'
             generateContent($conn, $subject, 'Notes');
-
+            
             // Close the database connection
             mysqli_close($conn);
             ?>
+            
         </div>
     </div>
 

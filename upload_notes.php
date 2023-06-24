@@ -32,21 +32,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Folder mapping based on the first three letters of the file name
     $folderMapping = array(
-        'F3L' => 'Full_Mark/Sem_3/Latt',
-        'P3L' => 'Pass_Mark/Sem_3/Latt',
+        'F3_Lat' => 'Full_Mark/Sem_3/Latt',
+        'P3_Lat' => 'Pass_Mark/Sem_3/Latt',
+        'F3_DSA' => 'Full_Mark/Sem_3/DSA',
+        'P3_DSA' => 'Pass_Mark/Sem_3/DSA',
         'ghi' => 'folder3'
         // Add more mappings as needed
     );
 
-    // Extract the first three letters of the file name
-    $prefix = substr($file_name, 0, 3);
+    // Extract the prefix from the file name
+    $prefix = substr($file_name, 0, 6);
 
     // Check if the prefix matches any mapping
     if (isset($folderMapping[$prefix])) {
         $folder = $folderMapping[$prefix];
     } else {
-        $folder = 'default_folder'; // Default folder if no specific match is found
+    $folder = 'default_folder'; // Default folder if no specific match is found
     }
+
+    // Extract the subject from the file name
+    $subject = substr($file_name, strpos($file_name, '_') + 1);
+
+    // Remove any additional parts after the subject (e.g., 'intro' in 'F3_Lat_intro')
+    $subject = strtok($subject, '_');
+
+    
 
     // Database configuration
     $servername = "localhost";
@@ -69,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Move the uploaded file to the desired directory
     if (move_uploaded_file($file_tmp, $file_path)) {
         // Insert the file details into the database
-        $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size) VALUES ('$file_name', '$file_path', '$file_type', '$file_size')";
+        $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject')";
 
         if (mysqli_query($conn, $sql)) {
             echo "File uploaded successfully.";
