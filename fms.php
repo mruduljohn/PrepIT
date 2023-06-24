@@ -37,11 +37,11 @@
                 <h2><a class="Sem">SEM 3</a></h2>
                 <div class="dropdown-content">
                     <a href="latt.php?subject=Linear Algebra and Transform Techniques">Linear Algebra and Transform Techniques</a>
-                    <a href="latt.php?subject=Logic Design">Logic Design</a>
+                    <a href="latt.php?subject=Digital Electronics">Digital Electronics</a>
                     <a href="latt.php?subject=Discrete Computational Structures">Discrete Computational Structures</a>
-                    <a href="latt.php?subject=Object Oriented Programming">Object Oriented Programming</a>
-                    <a href="latt.php?subject=Principles of Programming Languages">Principles of Programming Languages</a>
-                    <a href="latt.php?subject=Data and Computer Communication">Data and Computer Communication</a>
+                    <a href="latt.php?subject=Computer Architecture and Organization">Computer Architecture and Organization</a>
+                    <a href="latt.php?subject=Database Management Systems">Database Management Systems</a>
+                    <a href="latt.php?subject=Data Structures and Algoritms in C">Data Structures and Algoritms in C</a>
                 </div>  
             </div>
             <div class="dropdown">
@@ -49,10 +49,10 @@
                 <div class="dropdown-content">
                     <a href="latt.php?subject=Complex Variables and Partial Differential Equations">Complex Variables and Partial Differential Equations</a>
                     <a href="latt.php?subject=Microprocessors">Microprocessors</a>
-                    <a href="latt.php?subject=Computer Architecture and Organization">Computer Architecture and Organization</a>
+                    <a href="latt.php?subject=Object Oriented Programming">Object Oriented Programming</a>
                     <a href="latt.php?subject=Automata Languages and Computations">Automata Languages and Computations</a>
                     <a href="latt.php?subject=Data Structures and Algorithms">Data Structures and Algorithms</a>
-                    <a href="latt.php?subject=Database Management Systems">Database Management Systems</a>
+                    <a href="latt.php?subject=Principles of programming">Principles of programming</a>
                     <a href="latt.php?subject=Universal Human Values">Universal Human Values</a>
                 </div> 
             </div>
