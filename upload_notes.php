@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
+    
+
     // Get file details
     $file_name = $_FILES['pdf_file']['name'];
     $file_tmp = $_FILES['pdf_file']['tmp_name'];
