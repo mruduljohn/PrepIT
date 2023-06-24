@@ -16,8 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    
-
     // Get file details
     $file_name = $_FILES['pdf_file']['name'];
     $file_tmp = $_FILES['pdf_file']['tmp_name'];
@@ -49,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($folderMapping[$prefix])) {
         $folder = $folderMapping[$prefix];
     } else {
-    $folder = 'default_folder'; // Default folder if no specific match is found
+        $folder = 'default_folder'; // Default folder if no specific match is found
     }
 
     // Extract the subject from the file name
@@ -57,8 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Remove any additional parts after the subject (e.g., 'intro' in 'F3_Lat_intro')
     $subject = strtok($subject, '_');
-
-    
 
     // Database configuration
     $servername = "localhost";
@@ -77,25 +73,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepare the data for insertion
     $file_name = mysqli_real_escape_string($conn, $file_name);
     $file_path = "uploads/" . $folder . "/" . $file_name;
+// Generate a unique file name
+$unique_file_name = uniqid() . '_' . $file_name;
 
-    // Move the uploaded file to the desired directory
-    if (move_uploaded_file($file_tmp, $file_path)) {
-        // Insert the file details into the database
-        $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject')";
+// Check if a file with the same name already exists in the database
+$sql_check = "SELECT COUNT(*) AS count FROM notes WHERE file_name = '$file_name'";
+$result_check = mysqli_query($conn, $sql_check);
+$row_check = mysqli_fetch_assoc($result_check);
+$file_exists_db = $row_check['count'];
 
-        if (mysqli_query($conn, $sql)) {
-            echo "File uploaded successfully.";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+if ($file_exists_db > 0) {
+    echo "Error: A file with the same name already exists in the database.";
+    exit();
+}
+
+// Move the uploaded file to the desired directory with the unique file name
+if (move_uploaded_file($file_tmp, $file_path)) {
+    // Insert the file details into the database
+    $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "File uploaded successfully.";
     } else {
-        echo "Error uploading file.";
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+} else {
+    echo "Error uploading file.";
+}
+
+
 
     // Close the database connection
     mysqli_close($conn);
 }
 ?>
+
 
 <!-- Rest of the HTML code remains the same -->
 
