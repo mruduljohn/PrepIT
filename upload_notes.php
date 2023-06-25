@@ -75,24 +75,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepare the data for insertion
     $file_name = mysqli_real_escape_string($conn, $file_name);
     $file_path = "uploads/" . $folder . "/" . $file_name;
+// Check if a file with the same name already exists in the database
+$sql_check = "SELECT COUNT(*) AS count FROM notes WHERE file_name = '$file_name'";
+$result_check = mysqli_query($conn, $sql_check);
+$row_check = mysqli_fetch_assoc($result_check);
+$file_exists_db = $row_check['count'];
 
-    // Move the uploaded file to the desired directory
-    if (move_uploaded_file($file_tmp, $file_path)) {
-        // Insert the file details into the database
-        $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject')";
-
-        if (mysqli_query($conn, $sql)) {
-            echo "File uploaded successfully.";
-        } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
-    } else {
-        echo "Error uploading file.";
-    }
-
-    // Close the database connection
-    mysqli_close($conn);
+if ($file_exists_db > 0) {
+    echo "Error: A file with the same name already exists in the database.";
+    exit();
 }
+
+// Move the uploaded file to the desired directory with the unique file name
+if (move_uploaded_file($file_tmp, $file_path)) {
+    // Insert the file details into the database
+    $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "File uploaded successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+} else {
+    echo "Error uploading file.";
+}
+}
+
 ?>
 
 <!-- Rest of the HTML code remains the same -->
