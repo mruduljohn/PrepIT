@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Linear Algebra and Transform Techniques</title>
+    <title>Linear Algebra And Transform Techniques</title>
     <style>
         h1 {
             font-family: "Times New Roman", Times, serif;
@@ -39,7 +39,7 @@
     </style>
 </head>
 <body>
-    <h1>Linear Algebra and Transform Techniques</h1>
+    <h1>Linear Algebra And Transform Techniques</h1>
 
     <div class="column">
         <h2>Notes</h2>
@@ -60,10 +60,10 @@
             }
             
             // Function to generate dynamic content based on the subject and type
-            function generateContent($conn, $subject)
+            function generateContent($conn, $subject,$firstLetter)
             {
             // Prepare and execute a query to retrieve the content for the selected subject
-            $query = "SELECT file_name, file_path, file_type FROM notes WHERE subject = '$subject'";
+            $query = "SELECT file_name, file_path, file_type FROM notes WHERE subject = '$subject' AND orient='$firstLetter'";
             $result = mysqli_query($conn, $query);
 
             // Process the query result and generate the content
@@ -82,9 +82,12 @@
             
             // Retrieve the subject from the query parameter
             $subject = $_GET['subject'];
+
+            //Retrieve first letter from the query parameter
+            $firstLetter = $_GET['firstLetter'];
             
             // Call the generateContent function with the selected subject and type 'Notes'
-            generateContent($conn, $subject, 'otes');
+            generateContent($conn, $subject,$firstLetter);
             
             // Close the database connection
             mysqli_close($conn);

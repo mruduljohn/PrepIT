@@ -36,12 +36,12 @@
             <div class="dropdown">
                 <h2><a class="Sem">SEM 3</a></h2>
                 <div class="dropdown-content">
-                    <a href="latt.php?subject=Latt">Linear Algebra and Transform Techniques</a>
-                    <a href="latt.php?subject=Digital Electronics">Digital Electronics</a>
-                    <a href="latt.php?subject=Discrete Computational Structures">Discrete Computational Structures</a>
-                    <a href="latt.php?subject=Computer Architecture and Organization">Computer Architecture and Organization</a>
-                    <a href="latt.php?subject=Database Management Systems">Database Management Systems</a>
-                    <a href="latt.php?subject=Data Structures and Algoritms in C">Data Structures and Algoritms in C</a>
+                    <a href="LATT.php?subject=Latt & firstLetter=F">Linear Algebra and Transform Techniques</a>
+                    <a href="DE.php?subject=DE & firstLetter=F">Digital Electronics</a>
+                    <a href="DSA.php?subject=DSA & firstLetter=F">Data Stuctures and Algorithms</a>
+                    <a href="DBMS.php?subject=DBMS & firstLetter=F">Database Management System</a>
+                    <a href="DCS.php?subject=DCS & firstLetter=F">Discrete Computational Structures</a>
+                    <a href="CAO.php?subject=CAO & firstLetter=F">Computer Architecture and Organization</a>
                 </div>  
             </div>
             <div class="dropdown">

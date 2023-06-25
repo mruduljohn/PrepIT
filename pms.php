@@ -40,12 +40,12 @@ Engineering</a>
     </div> <div class="dropdown">
         <h2><a class="Sem">   SEM 3 </a> </h2>
         <div class="dropdown-content">
-        <a href="latt.php?subject=Latt">Linear Algebra and Transform Techniques</a>
-        <a href="#">Logic Design</a>
-        <a href="#">Discrete Computational Structures</a>
-        <a href="#">Object Oriented Programming</a>
-        <a href="#">Principles of Programming Languages</a>
-        <a href="#">Data and Computer Communication</a>
+        <a href="LATT.php?subject=Latt & firstLetter=P">Linear Algebra and Transform Techniques</a>
+        <a href="DE.php?subject=DE & firstLetter=P">Digital Electronics</a>
+        <a href="DSA.php?subject=DSA & firstLetter=P">Data Stuctures and Algorithms</a>
+        <a href="DBMS.php?subject=DBMS & firstLetter=P">Database Management System</a>
+        <a href="DCS.php?subject=DCS & firstLetter=P">Discrete Computational Structures</a>
+        <a href="CAO.php?subject=CAO & firstLetter=P">Computer Architecture and Organization</a>
 </div>  
     </div> <div class="dropdown">
         <h2><a class="Sem">   SEM 4 </a> </h2>
