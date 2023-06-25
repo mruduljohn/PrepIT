@@ -77,6 +77,8 @@
                     echo "No $type available for this subject.";
                 }
             }
+
+            
             
             // Retrieve the subject from the query parameter
             $subject = $_GET['subject'];
@@ -87,7 +89,7 @@
             // Close the database connection
             mysqli_close($conn);
             ?>
-            
+
         </div>
     </div>
 

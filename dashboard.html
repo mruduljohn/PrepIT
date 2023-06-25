@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>prepIT</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description"  content="Educo"/>
+<meta name="keywords" content="Educo, html template, Education template" />
+<meta name="author"  content="Kamleshyadav"/>
+<meta name="MobileOptimized" content="320" />
+
+<!--srart theme style -->
+<link href="css/main.css" rel="stylesheet" type="text/css"/>
+<!-- end theme style -->
+</head>
+<body>
+<!--Page main section start-->
+<div id="educo_wrapper">
+<!--Header start-->
+  <header id="ed_header_wrapper">
+    <div class="ed_header_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+			<p>welcome to our new session of education</p>
+			<div class="ed_info_wrapper">
+				<a href="#" id="login_button">LOGOUT</a>
+				<div id="login_one" class="ed_login_form">
+					<h3>LOGOUT</h3>
+
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="ed_header_bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="prepit_logo"> <a href="index.html"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8">
+			<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
+			</div>
+          <div class="edoco_menu">
+            <ul class="collapse navbar-collapse" id="ed_menu">
+              <li><a href="#">Home</a>
+				<ul class="sub-menu">
+					<li><a href="index.html">Home</a>
+                </ul>
+			  </li>
+			  <li><a href="about.html">about us</a></li>
+              <li><a href="#">courses</a>
+				<ul class="sub-menu">
+					<li><a href="fms.php">fullmark oriented study</a></li>
+					<li><a href="pms.php">passmark oriented study</a></li>
+
+				</ul>
+			  </li>
+              <li><a href="#">Pages</a>
+				<ul class="sub-menu">
+					<li><a href="login.html">login page</a></li>
+					<li><a href="register.html">Registration page</a></li>
+					<li><a href="index.php">Student dashboard</a></li>
+					<li><a href="admin_login.php">Admin login</a></li>
+					<li><a href="not_found.html">404 error</a></li>
+				</ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+  </header>
+ <!--header end -->
+<!--Breadcrumb start-->
+<div class="ed_pagetitle">
+<div class="ed_img_overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-4 col-sm-6">
+				<div class="page_title">
+					<h2>PrepIT Student</h2>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-8 col-sm-6">
+				<ul class="breadcrumb">
+					<li><a href="index.html">home</a></li>
+					<li><i class="fa fa-chevron-left"></i></li>
+					<li><a href="dashboard.html">PrepIT Student</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Breadcrumb end-->
+<!--single student detail start-->
+<div class="ed_dashboard_wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+				<div class="ed_sidebar_wrapper">
+					<div class="ed_profile_img">
+					<img src="data:image/png;base64,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" alt="Dashboard Image" />
+					<?php
+					session_start();
+			
+					if (isset($_SESSION['username'])) {
+						echo '<p>Hello ' . $_SESSION['username'] . '</p>';
+					}
+					?>
+				    </div>
+					 <div class="ed_tabs_left">
+						<ul class="nav nav-tabs">
+						  <li class="active"><a href="#dashboard" data-toggle="tab">dashboard</a></li>
+						  <li><a href="#courses" data-toggle="tab">courses <span>4</span></a></li>
+						  <li><a href="#activity" data-toggle="tab">activity</a></li>
+						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
+						  <li><a href="#profile" data-toggle="tab">profile</a></li>
+						  <li><a href="#setting" data-toggle="tab">setting</a></li>
+						  <li><a href="#forums" data-toggle="tab">forums</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+			<div class="ed_dashboard_tab">
+				<div class="tab-content">
+					<div class="tab-pane active" id="dashboard">
+						<div class="ed_dashboard_tab_info">
+						<h1>hello, <span>student</span></h1>
+						<h1>welcome to dashboard</h1>
+						<p>Hi, here you have to see and update your profile, subscribed courses, activities, notifications and other things. All the above updates can be modified from the left panel provided.</p>
+						</div>
+					</div>
+					<div class="tab-pane" id="courses">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#my" aria-controls="my" role="tab" data-toggle="tab">my courses</a></li>
+									<li role="presentation"><a href="#result" aria-controls="result" role="tab" data-toggle="tab">result</a></li>
+									<li role="presentation"><a href="#status" aria-controls="status" role="tab" data-toggle="tab">status</a></li>
+									<li role="presentation"><a href="#instructing" aria-controls="instructing" role="tab" data-toggle="tab">instructing courses</a></li>
+								</ul>
+					
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="my">
+									<div class="ed_inner_dashboard_info">
+									<h2>you have 4 subscribed courses</h2>
+										<div class="row">
+											<div class="ed_mostrecomeded_course_slider">
+												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
+													<div class="ed_item_img">
+														<img src="http://placehold.it/248X248" alt="item1" class="img-responsive">
+													</div>
+													<div class="ed_item_description ed_most_recomended_data">
+															<h4><a href="course_single.html">Project Learning </a><span>£25</span></h4>
+															<div class="row">
+																<div class="ed_rating">
+																	<div class="col-lg-6 col-md-7 col-sm-6 col-xs-6">
+																		<div class="row">
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="ed_stardiv">
+																					<div class="star-rating"><span style="width:80%;"></span></div>
+																				</div>
+																			</div>
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="row">
+																					<p>(5 review)</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-6 col-md-5 col-sm-6 col-xs-6">
+																		<div class="ed_views">
+																		<i class="fa fa-users"></i>
+																		<span>35 students</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p>Project-Based Learning is a flexible tool for framing given academic standards into flexible tool for framing.</p>
+															<a href="course_single.html" class="ed_getinvolved">get involved <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
+													<div class="ed_item_img">
+														<img src="http://placehold.it/248X248" alt="item1" class="img-responsive">
+													</div>
+													<div class="ed_item_description ed_most_recomended_data">
+															<h4><a href="course_single.html">Billing Seminar</a><span>£20</span></h4>
+															<div class="row">
+																<div class="ed_rating">
+																	<div class="col-lg-6 col-md-7 col-sm-6 col-xs-6">
+																		<div class="row">
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="ed_stardiv">
+																					<div class="star-rating"><span style="width:80%;"></span></div>
+																				</div>
+																			</div>
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="row">
+																					<p>(3 review)</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-6 col-md-5 col-sm-6 col-xs-6">
+																		<div class="ed_views">
+																		<i class="fa fa-users"></i>
+																		<span>55 students</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p>We offer these billing seminars to AMA member physicians along with their staff (at least must attend the seminar).</p>
+															<a href="course_single.html" class="ed_getinvolved">get involved <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
+													<div class="ed_item_img">
+														<img src="http://placehold.it/248X248" alt="item1" class="img-responsive">
+													</div>
+													<div class="ed_item_description ed_most_recomended_data">
+															<h4><a href="course_single.html">Girls On Rails </a><span>£40</span></h4>
+															<div class="row">
+																<div class="ed_rating">
+																	<div class="col-lg-6 col-md-7 col-sm-6 col-xs-6">
+																		<div class="row">
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="ed_stardiv">
+																					<div class="star-rating"><span style="width:80%;"></span></div>
+																				</div>
+																			</div>
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="row">
+																					<p>(8 review)</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-6 col-md-5 col-sm-6 col-xs-6">
+																		<div class="ed_views">
+																		<i class="fa fa-users"></i>
+																		<span>45 students</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p>In a lot of various jobs, psychology tests are something you will have to deal with. We can prepare you.</p>
+															<a href="course_single.html" class="ed_getinvolved">get involved <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
+													<div class="ed_item_img">
+														<img src="http://placehold.it/248X248" alt="item1" class="img-responsive">
+													</div>
+													<div class="ed_item_description ed_most_recomended_data">
+															<h4><a href="course_single.html">programming </a><span>£38</span></h4>
+															<div class="row">
+																<div class="ed_rating">
+																	<div class="col-lg-6 col-md-7 col-sm-6 col-xs-6">
+																		<div class="row">
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="ed_stardiv">
+																					<div class="star-rating"><span style="width:80%;"></span></div>
+																				</div>
+																			</div>
+																			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+																				<div class="row">
+																					<p>(9 review)</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-lg-6 col-md-5 col-sm-6 col-xs-6">
+																		<div class="ed_views">
+																		<i class="fa fa-users"></i>
+																		<span>60 students</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p>Project-Based Learning is a flexible tool for framing given academic standards into curriculum flexible tool for framing.</p>
+															<a href="course_single.html" class="ed_getinvolved">get involved <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="result">
+										<div class="ed_dashboard_inner_tab">
+											<h2>result details</h2>
+											<p>Nam id ligula tristique, porta dolor ac, pretium leo. Maecenas scelerisque vulputate dapibus. Quisque sodales tincidunt sapien, eu consequat erat tempus et. Nullam ipsum est, interdum quis posuere sed, imperdiet quis nisi. Proin quis justo est. Vestibulum imperdiet leo sit amet tortor suscipit, id cursus ligula pharetra. Uctus ac eros a, faucibus iaculis quam. Nam non iaculis justo. Donec maximus varius velit.</p>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="status">
+										<div class="ed_dashboard_inner_tab">
+											<h2>some recent status about this course</h2>
+											<p>Sed ultricies posuere magna elementum laoreet. Suspendisse elementum sagittis nisl, id pellentesque purus auctor finibus. Donec elementum quam est, a condimentum diam tempor ac. Sed quis magna lobortis, pulvinar est at, commodo mauris. Nunc in mollis erat. Integer aliquet orci non auctor pretium. Pellentesque eu nisl augue. Curabitur vitae est ut sem luctus tristique. Suspendisse euismod sapien facilisis tellus aliquam pellentesque.</p>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="instructing">
+										<div class="ed_dashboard_inner_tab">
+											<h2>you have not created any course</h2>
+											<p>Sed ultricies posuere magna elementum laoreet. Suspendisse elementum sagittis nisl, id pellentesque purus auctor finibus. Donec elementum quam est, a condimentum diam tempor ac. Sed quis magna lobortis, pulvinar est at, commodo mauris. Nunc in mollis erat. Integer aliquet orci non auctor pretium. Pellentesque eu nisl augue. Curabitur vitae est ut sem luctus tristique. Suspendisse euismod sapien facilisis tellus aliquam pellentesque.</p>
+										</div>
+									</div>
+								</div>
+					
+							</div><!--tab End-->
+						</div>
+					</div>
+					<div class="tab-pane" id="activity">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#personal" aria-controls="personal" role="tab" data-toggle="tab">personal</a></li>
+									<li role="presentation"><a href="#mentions" aria-controls="mentions" role="tab" data-toggle="tab">mentions</a></li>
+									<li role="presentation"><a href="#favourites" aria-controls="favourites" role="tab" data-toggle="tab">favourites</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="personal">
+									<div class="ed_dashboard_inner_tab">
+										<h2>What's new, andrehouse@123 ?</h2>
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<form class="ed_tabpersonal">
+													<div class="form-group">
+													<textarea name="whats_new" class="form-control" id="whats_new" cols="50" rows="5"></textarea>
+													</div>
+													<div class="form-group">
+													<button class="btn ed_btn ed_green">post update</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="mentions">
+									<div class="ed_dashboard_inner_tab">
+										<h2>sorry, there was no mentions event found. please try a different filter</h2>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="favourites">
+									<div class="ed_dashboard_inner_tab">
+										<h2>sorry, there was no favourites event found. please try a different filter</h2>
+									</div>
+									</div>
+								</div>
+					
+							</div><!--tab End-->
+						</div>
+					</div>
+					<div class="tab-pane" id="notification">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#unread" aria-controls="unread" role="tab" data-toggle="tab">unread</a></li>
+									<li role="presentation"><a href="#read" aria-controls="read" role="tab" data-toggle="tab">read</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="unread">
+									<div class="ed_dashboard_inner_tab">
+										<h2>you have no unread notifications</h2>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="read">
+									<div class="ed_dashboard_inner_tab">
+										<h2>you have no notifications</h2>
+									</div>
+									</div>
+								</div>
+							</div><!--tab End-->
+						</div>
+					</div>
+					<div class="tab-pane" id="profile">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#view" aria-controls="view" role="tab" data-toggle="tab">view</a></li>
+									<li role="presentation"><a href="#edit" aria-controls="edit" role="tab" data-toggle="tab">edit</a></li>
+									<li role="presentation"><a href="#change" aria-controls="change" role="tab" data-toggle="tab">change profile photo</a></li>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="view">
+									<div class="ed_dashboard_inner_tab">
+										<h2>your profile</h2>
+										<table id="profile_view_settings">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Id</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>Andre House</td>
+													<td><a href="#">andrehouse@123</a></td>
+												</tr>												
+											</tbody>
+										</table>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="edit">
+									<div class="ed_dashboard_inner_tab">
+										<h2>edit profile</h2>
+											<form class="ed_tabpersonal">
+												<div class="form-group">
+												<input type="text" class="form-control"  placeholder="Your Name">
+												</div>
+												<div class="form-group">
+												<p>This field can be seen by: <strong>Everyone</strong></p>
+												</div>
+												<div class="form-group">
+												<button class="btn ed_btn ed_green">save changes</button>
+												</div>
+											</form>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="change">
+										<div class="ed_dashboard_inner_tab">
+											<h2>change photo</h2>
+											<form class="ed_tabpersonal">
+												<div class="form-group">
+												<p>Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed.</p>
+												</div>
+												<div class="form-group">
+												<input type="file" name="photo" accept="image/*">
+												</div>
+												<div class="form-group">
+												<button class="btn ed_btn ed_green">upload image</button>
+												</div>
+												<div class="form-group">
+												<p>If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button.</p>
+												</div>
+												<div class="form-group">
+												<button class="btn ed_btn ed_orange">delete</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div><!--tab End-->
+						</div>
+					</div>
+					<div class="tab-pane" id="setting">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab">general</a></li>
+									<li role="presentation"><a href="#email" aria-controls="email" role="tab" data-toggle="tab">email</a></li>
+									<li role="presentation"><a href="#visibility" aria-controls="visibility" role="tab" data-toggle="tab">profile visibility</a></li>
+								</ul>
+					
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="general">
+									<div class="ed_dashboard_inner_tab">
+										<h2>general setting</h2>
+										<form class="ed_tabpersonal">
+											<div class="form-group">
+											<input type="text" class="form-control"  placeholder="Your Account Email">
+											</div>
+											<div class="form-group">
+											<p>Change Password <strong>(leave blank for no change)</strong></p>
+											</div>
+											<div class="form-group">
+											<input type="password" class="form-control"  placeholder="New Password">
+											</div>
+											<div class="form-group">
+											<input type="password" class="form-control"  placeholder="Repeat New Password">
+											</div>
+											<div class="form-group">
+											<button class="btn ed_btn ed_green">save changes</button>
+											</div>
+										</form>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="email">
+									<div class="ed_dashboard_inner_tab">
+										<h2>email notification</h2>
+										<span>Send an email notice when:</span>
+										<table id="notification_settings">
+											<thead>
+												<tr>
+													<th class="title">Activity</th>
+													<th class="yes">Yes</th>
+													<th class="no">No</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>A member mentions you in an update using "@andrehouse123"</td>
+													<td class="yes"><input type="radio" name="activity1" value="yes" checked="checked"></td>
+													<td class="no"><input type="radio" name="activity1" value="no"></td>
+												</tr>
+												
+												<tr>
+													<td>A member replies to an update or comment you've posted</td>
+													<td><input type="radio" name="activity2" value="yes" checked="checked"></td>
+													<td><input type="radio" name="activity2" value="no"></td>
+												</tr>
+											</tbody>
+										</table>
+										<button class="btn ed_btn ed_green">save changes</button>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="visibility">
+									<div class="ed_dashboard_inner_tab">
+										<h2>profile visibility</h2>
+										<table id="visibility_settings">
+											<thead>
+												<tr>
+													<th class="title">Name</th>
+													<th class="yes">Visibility</th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td>Andre House</td>
+													<td>Everyone</td>
+												</tr>												
+											</tbody>
+										</table>
+										<button class="btn ed_btn ed_green">save setting</button>
+									</div>
+									</div>
+								</div>
+					
+							</div><!--tab End-->
+						</div>
+					</div>
+					<div class="tab-pane" id="forums">
+						<div class="ed_dashboard_inner_tab">
+							<div role="tabpanel">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">topics started</a></li>
+									<li role="presentation"><a href="#replies" aria-controls="replies" role="tab" data-toggle="tab">replies created</a></li>
+									<li role="presentation"><a href="#favourite" aria-controls="favourite" role="tab" data-toggle="tab">favourite</a></li>
+									<li role="presentation"><a href="#subscribed" aria-controls="subscribed" role="tab" data-toggle="tab">subscribed</a></li>
+								</ul>
+					
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="started">
+									<div class="ed_dashboard_inner_tab">
+										<h2>forum topics started</h2>
+										<span>You have not created any topics.</span>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="replies">
+									<div class="ed_dashboard_inner_tab">
+										<h2>forum replies created</h2>
+										<span>You have not replied to any topics.</span>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="favourite">
+									<div class="ed_dashboard_inner_tab">
+										<h2>favorite forum topics</h2>
+										<span>You currently have no favourite topics.</span>
+									</div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="subscribed">
+									<div class="ed_dashboard_inner_tab">
+										<h2>subscribed forums</h2>
+										<span>You are not currently subscribed to any forums.</span>
+									</div>
+									</div>
+								</div>
+					
+							</div><!--tab End-->
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+</div>
+<!--Page main section end-->
+<!--main js file start--> 
+<script type="text/javascript" src="js/jquery-1.12.2.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/modernizr.js"></script> 
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/smooth-scroll.js"></script> 
+<script type="text/javascript" src="js/plugins/revel/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="js/plugins/revel/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="js/plugins/revel/revolution.extension.layeranimation.min.js"></script>
+<script type="text/javascript" src="js/plugins/revel/revolution.extension.navigation.min.js"></script>
+<script type="text/javascript" src="js/plugins/revel/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="js/plugins/countto/jquery.countTo.js"></script>
+<script type="text/javascript" src="js/plugins/countto/jquery.appear.js"></script>
+<script type="text/javascript" src="js/custom.js"></script> 
+
+<!--main js file end-->
+</body>
+</html>
