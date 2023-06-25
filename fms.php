@@ -36,7 +36,7 @@
             <div class="dropdown">
                 <h2><a class="Sem">SEM 3</a></h2>
                 <div class="dropdown-content">
-                    <a href="latt.php?subject=Linear Algebra and Transform Techniques">Linear Algebra and Transform Techniques</a>
+                    <a href="latt.php?subject=Latt">Linear Algebra and Transform Techniques</a>
                     <a href="latt.php?subject=Digital Electronics">Digital Electronics</a>
                     <a href="latt.php?subject=Discrete Computational Structures">Discrete Computational Structures</a>
                     <a href="latt.php?subject=Computer Architecture and Organization">Computer Architecture and Organization</a>
