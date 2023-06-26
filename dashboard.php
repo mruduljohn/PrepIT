@@ -23,11 +23,12 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
-			<p>welcome to our new session of education</p>
+			<p>welcome to New session of education</p>
 			<div class="ed_info_wrapper">
 				<a href="logout.php" id="login_button">LOGOUT</a>
 				<div id="login_one" class="ed_login_form">
 					<h3>LOGOUT</h3>
+
 
 				</div>
 			</div>
@@ -59,15 +60,6 @@
 
 				</ul>
 			  </li>
-              <li><a href="#">Pages</a>
-				<ul class="sub-menu">
-					<li><a href="login.html">login page</a></li>
-					<li><a href="register.html">Registration page</a></li>
-					<li><a href="index.php">Student dashboard</a></li>
-					<li><a href="admin_login.php">Admin login</a></li>
-					<li><a href="not_found.html">404 error</a></li>
-				</ul>
-              </li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -84,7 +76,7 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-4 col-sm-6">
 				<div class="page_title">
-					<h2>PrepIT Student</h2>
+					<h2>PrepIT Student Dashboard</h2>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-6">
@@ -123,7 +115,7 @@
 						  <li><a href="#courses" data-toggle="tab">courses <span>2</span></a></li>
 
 						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
-						  <li><a href="#profile" data-toggle="tab">share your notes</a></li>
+						  <li><a href="#profile" data-toggle="tab">Your Profile</a></li>
 						  <li><a href="#forums" data-toggle="tab">comments</a></li>
 						</ul>
 					</div>
@@ -147,7 +139,7 @@
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane active" id="my">
 									<div class="ed_inner_dashboard_info">
-									<h2>HERE WE HAVE OUR COURSES</h2>
+									<h2>HERE WE HAVE OUR COURSES..</h2>
 										<div class="row">
 											<div class="ed_mostrecomeded_course_slider">
 												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
@@ -425,38 +417,19 @@
 							<div role="tabpanel">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
-									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">topics started</a></li>
-									<li role="presentation"><a href="#replies" aria-controls="replies" role="tab" data-toggle="tab">replies created</a></li>
-									<li role="presentation"><a href="#favourite" aria-controls="favourite" role="tab" data-toggle="tab">favourite</a></li>
-									<li role="presentation"><a href="#subscribed" aria-controls="subscribed" role="tab" data-toggle="tab">subscribed</a></li>
+									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">Comments</a></li>
 								</ul>
 					
 								<!-- Tab panes -->
 								<div class="tab-content">
-									<div role="tabpanel" class="tab-pane active" id="started">
-									<div class="ed_dashboard_inner_tab">
-										<h2>forum topics started</h2>
-										<span>You have not created any topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="replies">
-									<div class="ed_dashboard_inner_tab">
-										<h2>forum replies created</h2>
-										<span>You have not replied to any topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="favourite">
-									<div class="ed_dashboard_inner_tab">
-										<h2>favorite forum topics</h2>
-										<span>You currently have no favourite topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="subscribed">
-									<div class="ed_dashboard_inner_tab">
-										<h2>subscribed forums</h2>
-										<span>You are not currently subscribed to any forums.</span>
-									</div>
-									</div>
+								<h3>Here you can give your comments</h3>
+  									<form method="POST" action="submit_comment.php">
+									  <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+    									<label for="comment">Comments:</label>
+    									<input type="text" id="comment" name="comment" placeholder="Enter your comment here"><br><br><br>
+   										<input type="submit" value="Submit" class="but">
+  									</form>
 								</div>
 					
 							</div><!--tab End-->
