@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "blablaadmin";
 $password = "bla123bla456";
-$dbname = "prepit_users";
+$dbname = "prepit_comments";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
