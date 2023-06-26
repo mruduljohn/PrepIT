@@ -115,7 +115,7 @@ Processing</a>
 
 </div>  
 <div class="back-button">
-<a class="back-button" href="index.php">Back</a>
+<a class="back-button" href="dashboard.php">Back</a>
 </div>
 </body>
 </html>

@@ -105,7 +105,7 @@
 					// Check if the username is set in the session
 					if (isset($_SESSION['username'])) {
 						$username = $_SESSION['username'];
-						echo '<p>Hello ' . $username . '</p>';
+						echo '<h3>Hello ' . $username . '</h3>';
 					} 
 					?>
 				    </div>
