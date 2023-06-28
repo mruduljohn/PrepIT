@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<style>
+          .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+            background-color: #002147;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #0f4880;
+        }
+
+        .clear {
+            clear: both;
+        }
+</style>
+
 <?php
 
 // Establish a database connection
@@ -34,6 +62,9 @@ if ($conn->query($sql) === TRUE) {
 // ...
 $conn->close();
 
-
-
 ?>
+
+<div class="clear"></div>
+<a class="back-button" href="dashboard.php">Back</a>
+</body>
+</html>
