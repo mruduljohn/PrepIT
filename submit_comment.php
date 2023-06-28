@@ -44,14 +44,16 @@ if (!$conn) {
 // Retrieve the name and comment from the form submission
 $name = $_POST["name"];
 $comment = $_POST["comment"];
+$sem = $_POST["sem"];
+$subject = $_POST["subject"];
 
 if (empty($name) || empty($comment)) {
     echo "Please fill in both the name and comment fields.";
     exit;
   }
 
-// Insert the name and comment into the table
-$sql = "INSERT INTO comments_table (name, comment) VALUES ('$name', '$comment')";
+// Insert the name,comment,sem and subject into the table
+$sql = "INSERT INTO comments_table (name, comment,sem,subject) VALUES ('$name', '$comment','$sem','$subject')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Comment submitted successfully!";
