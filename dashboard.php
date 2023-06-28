@@ -426,9 +426,14 @@
   									<form method="POST" action="submit_comment.php">
 									  <label for="name">Name:</label>
                                         <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
-    									<label for="comment">Comments:</label>
+    								<label for="sem">SEM(optional):</label>
+										<input type="text" id="sem" name="sem" placeholder="Enter your sem"><br><br>
+    								<label for="subject">Subject(optional):</label>
+										<input type="text" id="subject" name="subject" placeholder="Enter the subject"><br><br>
+    								<label for="comment">Comments:</label>
     									<input type="text" id="comment" name="comment" placeholder="Enter your comment here"><br><br><br>
    										<input type="submit" value="Submit" class="but">
+
   									</form>
 								</div>
 					
