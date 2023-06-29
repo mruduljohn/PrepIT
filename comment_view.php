@@ -56,7 +56,7 @@ if (!$conn) {
 }
 
     // Query to fetch data from the table
-    $sql = "SELECT id, name, comment FROM comments_table";
+    $sql = "SELECT id, name,sem,subject, comment FROM comments_table";
     $result = $conn->query($sql);
 
     // Check if there are any records in the table
@@ -66,6 +66,8 @@ if (!$conn) {
             echo '<div class="comment">';
             echo "<p><strong>ID:</strong> " . $row['id'] . "</p>";
             echo "<p><strong>Name:</strong> " . $row['name'] . "</p>";
+            echo "<p><strong>Semester:</strong> " . $row['sem'] . "</p>";
+            echo "<p><strong>Subject:</strong> " . $row['subject'] . "</p>";
             echo "<p><strong>Comment:</strong> " . $row['comment'] . "</p>";
             echo '</div>';
         }
