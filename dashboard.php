@@ -273,8 +273,64 @@
 
 											<tbody>
 												<tr>
-													<td>Andre House</td>
-													<td><a href="#">andrehouse@123</a></td>
+													<td>
+<?php
+// Check if the username is set in the session
+if (isset($_SESSION['username'])) {
+$username = $_SESSION['username'];
+echo '<h5>' . $username . '</h5>';
+} 
+?>
+													</td>
+													<td>
+<?php
+// Check if the username is set in the session
+if (isset($_SESSION['username'])) {
+    $username_user = $_SESSION['username'];
+
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "blablaadmin";
+    $password = "bla123bla456";
+    $dbname = "prepit_users";
+
+    // Create a new connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Prepare the query to select the email
+    $query = "SELECT email FROM users WHERE username = '$username_user'";
+
+    // Execute the query
+    $result = mysqli_query($conn, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        // Check if any rows were returned
+        if (mysqli_num_rows($result) > 0) {
+            // Fetch the email from the result
+            $row = mysqli_fetch_assoc($result);
+            $email = $row['email'];
+
+            // Display the email
+            echo '<h6><a href="#">' . $email . '</a></h6>';
+        } else {
+            echo "Email not found.";
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    // Close the database connection
+    mysqli_close($conn);
+}
+?>
+
+													</td>
 												</tr>												
 											</tbody>
 										</table>

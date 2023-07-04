@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Start a session and store user data
             session_start();
             $_SESSION['username'] = $username;
+            
 
             // Redirect to home page
             header("Location: dashboard.php");
