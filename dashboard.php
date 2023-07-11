@@ -359,12 +359,15 @@ if (isset($_SESSION['username'])) {
 												<div class="form-group">
 												<p>Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed.</p>
 												</div>
-												<div class="form-group">
-												<input type="file" name="photo" accept="image/*">
-												</div>
-												<div class="form-group">
-												<button class="btn ed_btn ed_green">upload image</button>
-												</div>
+												
+												
+<form action="upload_dp.php" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+  <input type="file" name="image">
+  <input class="btn ed_btn ed_orange" type="submit" value="Upload">
+  </div>
+</form>
+												
 												<div class="form-group">
 												<p>If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button.</p>
 												</div>
