@@ -47,11 +47,7 @@
 			</div>
           <div class="edoco_menu">
             <ul class="collapse navbar-collapse" id="ed_menu">
-              <li><a href="#">Home</a>
-				<ul class="sub-menu">
-					<li><a href="index.php">Home</a>
-                </ul>
-			  </li>
+              <li><a href="index.php">Home</a></li>
 			  <li><a href="about.html">About us</a></li>
               <li><a href="#">courses</a>
 				<ul class="sub-menu">
