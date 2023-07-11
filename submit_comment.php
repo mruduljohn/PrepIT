@@ -24,20 +24,6 @@
         .clear {
             clear: both;
         }
-        .successMessage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ADD8E6;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  width: 200px; /* Adjust the width of the container as needed */
-  margin: 200px auto; /* Centers the container horizontally */
-  text-align: center;
-}
-
-
 </style>
 
 <?php
@@ -68,13 +54,12 @@ if (empty($name) || empty($comment)) {
 
 // Insert the name,comment,sem and subject into the table
 $sql = "INSERT INTO comments_table (name, comment,sem,subject) VALUES ('$name', '$comment','$sem','$subject')";
+
 if ($conn->query($sql) === TRUE) {
-  echo '<div class="successMessage">Comment submitted successfully!</div>';
-
-} else {
-  echo '<div class="errorMessage">Error: ' . $sql . '<br>' . $conn->error . '</div>';
-}
-
+    echo "Comment submitted successfully!";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 
 // ...
 $conn->close();
