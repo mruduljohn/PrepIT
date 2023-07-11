@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>prepIT</title>
+<title>PrepIT</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta name="description"  content="Educo"/>
-<meta name="keywords" content="Educo, html template, Education template" />
-<meta name="author"  content="Kamleshyadav"/>
+<meta name="description"  content="PrepIT"/>
+<meta name="keywords" content="PrepIT" />
+<meta name="author"  content="BlaBla"/>
 <meta name="MobileOptimized" content="320" />
 
 <!--srart theme style -->
@@ -23,7 +23,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
-			<p>welcome to New session of education</p>
+			<p>Welcome to New Session of Education</p>
 			<div class="ed_info_wrapper">
 				<a href="logout.php" id="login_button">LOGOUT</a>
 				<div id="login_one" class="ed_login_form">
@@ -40,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-2">
-            <div class="prepit_logo"> <a href="index.html"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+            <div class="prepit_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-8">
 			<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
@@ -52,11 +52,11 @@
 					<li><a href="index.php">Home</a>
                 </ul>
 			  </li>
-			  <li><a href="about.html">about us</a></li>
+			  <li><a href="about.html">About us</a></li>
               <li><a href="#">courses</a>
 				<ul class="sub-menu">
-					<li><a href="fms.php">fullmark oriented study</a></li>
-					<li><a href="pms.php">passmark oriented study</a></li>
+					<li><a href="fms.php">Fullmark Oriented Study</a></li>
+					<li><a href="pms.php">Passmark Oriented Study</a></li>
 
 				</ul>
 			  </li>
@@ -81,7 +81,7 @@
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-6">
 				<ul class="breadcrumb">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li><i class="fa fa-chevron-left"></i></li>
 					<li><a href="dashboard.php">PrepIT Student</a></li>
 				</ul>

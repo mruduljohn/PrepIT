@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div class="prepit_logo"> <a href="index.html"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+					<div class="prepit_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8">
 					<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
@@ -40,7 +40,7 @@
 						<ul class="collapse navbar-collapse" id="ed_menu">
 							<li><a href="#">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="index.php">Home</a></li>
 								</ul>
 							</li>
 							<li><a href="about.html">about us</a></li>
@@ -304,7 +304,6 @@
 			</div>
 		
     </div><!-- /.container -->
-<!--video_section Section three start -->
 
 
 <!--Page main section end-->
