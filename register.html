@@ -9,7 +9,16 @@
   <title>CodePen - Prepit Register Login   &amp; CSS Only</title> 
 
   <link rel="stylesheet" href="css/styles2.css"> 
+  <style>
+    /* Add custom CSS styles */
 
+    .center-heading {
+      text-align: center;
+    
+
+
+    }
+  </style>
  </head> 
 
  <body> <!-- partial:index.partial.html --> 
@@ -17,50 +26,36 @@
   <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
 
    <div class="signin"> 
-
     <div class="content"> 
+      <form method="post" action="register.php">
+        <div class="center-heading">
 
-     <h2>Sign Up</h2> 
+          <h2>Sign Up</h2>
 
-     <div class="form"> 
-
-      <div class="inputBox"> 
-
-       <input type="text" required> <i>Username</i> 
-
+        </div>
+        <div class="form"> 
+          <div class="inputBox"> 
+          <input type="text" name="username" required> <i>Username</i> 
+          </div> 
+          <div class="inputBox"> 
+            <input type="email" name="email" required> <i>Email id</i> 
+          </div> 
+          <div class="inputBox"> 
+            <input type="password" name="password" required> <i>Password</i>
+          </div> 
+          <div class="inputBox"> 
+            <input type="password" name="confirm_password" required> <i> Confirm Password</i> 
+          </div> 
+          <div class="inputBox"> 
+          <input type="submit" value="Register"> 
+          </div> 
+          <div>
+            <h5>Already have an account ? <a href="login.html"> Login Now </a></h5>
+          </div>
+        </div> 
+        </div> 
       </div> 
-
-     
-      <div class="inputBox"> 
-
-        <input type="email" required> <i>Email id</i> 
- 
-       </div> 
-       <div class="inputBox"> 
-
-        <input type="password" required> <i>Password</i> 
- 
-       </div> 
-       <div class="inputBox"> 
-
-        <input type="password" required> <i> Confirm Password</i> 
- 
-       </div> 
-
-    
-      <div class="inputBox"> 
-
-       <input type="submit" value="Register"> 
-
-      </div> 
-
-     </div> 
-
-    </div> 
-
-   </div> 
-  
-
+      </form>
   </section> <!-- partial --> 
 
  </body>
