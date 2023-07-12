@@ -474,24 +474,45 @@ if (isset($_SESSION['username'])) {
 									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">Comments</a></li>
 								</ul>
 					
-								<!-- Tab panes -->
-								<div class="tab-content">
-								<h3>Here you can give your comments</h3>
-  									<form method="POST" action="submit_comment.php">
-									  <label for="name">Name:</label>
-                                        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
-    								<label for="sem">SEM(optional):</label>
-										<input type="text" id="sem" name="sem" placeholder="Enter your sem"><br><br>
-    								<label for="subject">Subject(optional):</label>
-										<input type="text" id="subject" name="subject" placeholder="Enter the subject"><br><br>
-    								<label for="comment">Comments:</label>
-    									<input type="text" id="comment" name="comment" placeholder="Enter your comment here"><br><br><br>
-   										<input type="submit" value="Submit" class="but">
-
-  									</form>
-								</div>
-					
-							</div><!--tab End-->
+								<!--Section fourteen Contact form start-->
+<div class="ed_transprentbg ed_toppadder80 ed_bottompadder80">
+	<div class="container">
+		<form method="POST" action="submit_comment.php">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="ed_heading_top">
+					<h3>Send us a message</h3>
+				</div>
+			</div>
+			<div class="ed_contact_form ed_toppadder60">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="form-group">
+					<input type="text" id="name" name="name" class="form-control"  placeholder="Your Name">
+				</div>
+				<div class="form-group">
+					<input type="text" id="sem" name="sem" class="form-control"  placeholder="Your semester">
+				</div>
+				<div class="form-group">
+					<input type="text" id="subject" name="subject" class="form-control"  placeholder="Subject">
+				</div>
+				</div>
+				
+			</div>
+			<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="form-group">
+					<textarea id="comment" name="comment" class="form-control" rows="6" placeholder="Message"></textarea>
+				</div>
+				<button id="ed_submit" class="btn ed_btn ed_orange pull-right">send</button>
+				<p id="err"></p>
+				</div>
+			</div>
+		</div>
+		</form>
+		
+	</div>
+</div>
+<!--Section fourteen Contact form start-->
 						</div>
 					</div>
 				</div>
