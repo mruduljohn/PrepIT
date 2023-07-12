@@ -12,6 +12,7 @@
 
 <!--srart theme style -->
 <link href="css/main.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
 <!-- end theme style -->
 </head>
 <body>

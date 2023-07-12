@@ -3,6 +3,8 @@
 <head>
     <title>Resources</title>
     <link rel="stylesheet" href="css/resource.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+
 </head>
 <body>
     <div class="container">

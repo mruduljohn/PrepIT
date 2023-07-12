@@ -13,6 +13,7 @@
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"> -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     <style>
         /* Your custom CSS styles */
         body {

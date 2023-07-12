@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
     <title>Comments</title>
     <style>
         .comment {

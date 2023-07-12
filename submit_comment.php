@@ -2,6 +2,8 @@
 <html lang="en">
 
 <body>
+<link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+
 
 <style>
           .back-button {
