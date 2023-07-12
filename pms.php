@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< Updated upstream
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -52,6 +53,16 @@
             background-color: #06233d;
         }
     </style>
+=======
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>PHP Web Page</title>
+    <link rel="stylesheet" href="css/pms2.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+
+    
+>>>>>>> Stashed changes
 </head>
 <body>
 <div id="educo_wrapper">
