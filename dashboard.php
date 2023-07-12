@@ -29,8 +29,6 @@
 				<a href="logout.php" id="login_button">LOGOUT</a>
 				<div id="login_one" class="ed_login_form">
 					<h3>LOGOUT</h3>
-
-
 				</div>
 			</div>
 		  </div>

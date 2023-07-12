@@ -23,7 +23,17 @@
 			<div class="row" style="color: rgb(3, 3, 96);">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<p>Welcome to New session of Education</p>
-					
+					<div class="ed_info_wrapper">
+					<a href="#" id="login_button">Login or Register</a>
+					<div id="login_one" class="ed_login_form">
+						<form class="form">
+							<div class="form-group">
+								<a href="login.html">login</a>
+								<a href="register.html">registration</a>	
+							</div>
+						</form>
+					</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -49,23 +59,13 @@
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
-							
+
 						</ul>
 					</div>
+					
 				</div>
 
-				<div class="ed_info_wrapper">
-					<a href="#" id="login_button">Login or Register</a>
-						<div id="login_one" class="ed_login_form">
-							<form class="form">
-								<div class="form-group">
-									<a href="login.html">login</a>
-									<a href="register.html">registration</a>	
-								</div>
-							</form>
-				</div>
-
-			</div>
+				
 		</div>
     
 </header>
