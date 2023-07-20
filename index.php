@@ -11,7 +11,17 @@
 <link href="css/main.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
 <!-- end theme style -->
-
+<style>
+	form {
+    margin: 10px auto;
+    width: 220px;
+    text-align: left;
+}
+.ed_login_form .form {
+    text-align: left;
+    padding-top: 7px;
+}
+</style>
 </head>
 <body>
 <!--Page main section start-->

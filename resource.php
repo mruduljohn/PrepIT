@@ -2,8 +2,62 @@
 <html>
 <head>
     <title>Resources</title>
-    <link rel="stylesheet" href="css/resource.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/resource.css" type="text/css"> -->
     <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #002147;
+        }
+
+        .section-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            min-height: 400px;
+        }
+
+        .scroll-box {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .scroll-box p {
+            margin: 0;
+            padding: 5px 0;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #086bdc;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #00152e;
+        }
+    </style>
 
 </head>
 <body>
@@ -11,9 +65,11 @@
     
         <h1>Resources</h1>
 
-        <div class="column">
-            <h2 style="color: #002147;">Notes</h2>
-            <div class="scroll-box">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-box">
+                    <h2 style="color: #002147;">Notes</h2>
+                    <div class="scroll-box">
                 <?php
                 // Database configuration
                 $servername = "localhost";
@@ -62,10 +118,11 @@
                 ?>
             </div>
         </div>
-
-        <div class="column">
-            <h2 style="color: #002147;">YouTube Links</h2>
-            <div class="scroll-box">
+    </div>
+    <div class="col-md-6">
+                <div class="section-box">
+                    <h2 style="color: #002147;">YouTube Links</h2>
+                    <div class="scroll-box">
                 <?php
                 // Database configuration
                 $servername = "localhost";
@@ -105,9 +162,13 @@
                 ?>
             </div>
         </div>
-
-        <div class="clear"></div>
-        <a class="back-button" href="fms.php">Back</a>
     </div>
+</div>
+        <div class="text-center mt-4"></div>
+        <a class="back-button btn btn-secondary mt-3" href="dashboard.php">Back</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

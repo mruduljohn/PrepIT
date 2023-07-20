@@ -14,6 +14,11 @@
 <!-- end theme style -->
 <!-- favicon links -->
 <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+<style>
+	form{
+		width: 100%;
+	}
+</style>
 </head>
 <body>
 <!--Page main section start-->
@@ -112,26 +117,28 @@
 					<h3>Send us a message</h3>
 				</div>
 			</div>
+			<form id="contactForm" method="post" action="contact.php" >
 			<div class="ed_contact_form ed_toppadder60">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 				<div class="form-group">
-					<input type="text" id="uname" class="form-control"  placeholder="Your Name">
+					<input type="text" id="uname" name="uname" class="form-control"  placeholder="Your Name">
 				</div>
 				<div class="form-group">
-					<input type="email" id="umail" class="form-control"  placeholder="Your Email">
+					<input type="email" id="umail" name="umail" class="form-control"  placeholder="Your Email">
 				</div>
 				<div class="form-group">
-					<input type="text" id="sub" class="form-control"  placeholder="Subject">
+					<input type="text" id="sub" name="sub" class="form-control"  placeholder="Subject">
 				</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12">
 				<div class="form-group">
-					<textarea id="msg" class="form-control" rows="6" placeholder="Message"></textarea>
+					<textarea id="msg" name="msg" class="form-control" rows="6" placeholder="Message"></textarea>
 				</div>
 				<button id="ed_submit" class="btn ed_btn ed_orange pull-right">send</button>
 				<p id="err"></p>
 				</div>
 			</div>
+			</form>
 		</div>
 	</div>
 </div>
@@ -149,9 +156,9 @@
 					<div class="ed_event_single_address_info ed_toppadder50 ed_bottompadder50">
 						<h4 class="ed_bottompadder30">contact info</h4>
 						<p class="ed_bottompadder40 ed_toppadder10">You can always reach us via following contact details. We will give our best to reach you as possible.</p>
-						<p>Phone: <span>1-220-090-080</span></p>
-						<p>Email: <a href="#">info@edutioncollege.gov.co.uk</a></p>
-						<p>Website: <a href="#">http://www.edutioncollege.gov.co.uk</a></p>
+						<p>Phone: <span>9876543210</span></p>
+						<p>Email: <a href="#">prepit@gmail.com</a></p>
+						<p>Website: <a href="#">http://www.prepit.in</a></p>
 					</div>
 				</div>
 			</div>
@@ -180,9 +187,9 @@
 					<div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-offset-3">
 						<div class="row">
 							<div class="ed_newsletter_section_form">
-								<form class="form">
+								<form class="form" method="post" action="newsletter.php">
 									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-										<input class="form-control" type="text" placeholder="Newsletter Email" />
+										<input class="form-control" type="text" name="newsemail" placeholder="Newsletter Email" />
 									</div>
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 										<button class="btn ed_btn ed_green">confirm</button>
@@ -221,9 +228,9 @@
 				<div class="col-lg-4 col-md-4 col-sm-12">
 					<div class="widget text-widget">
 						<h4 class="widget-title">find us</h4>
-						<p><i class="fa fa-safari"></i>Wimbledon Street 42a, 45290 Wimbledon, <br/>United Kingdom</p>
-						<p><i class="fa fa-envelope-o"></i><a href="#">info@edutioncollege.gov.co.uk</a> <a href="#">public@edutioncollege.gov.co.uk</a></p>
-						<p><i class="fa fa-phone"></i> 1-220-090-080</p>
+						<p><i class="fa fa-safari"></i>Division of Information Technology <br/>Cochin University of Science And Technology<br> Kochi</p>
+						<p><i class="fa fa-envelope-o"></i><a href="#">prepit@gmail.com</a> <a href="#">https://www.prepit.in</a></p>
+						<p><i class="fa fa-phone"></i> 9876543210</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12">
@@ -289,8 +296,8 @@
       map = new GMaps({
         el: '#map',
         zoom: 16,
-        lat: -12.043333,
-        lng: -77.028333,
+        lat: 10.049149,
+        lng: 76.331339,
 		scrollwheel: false,
 		draggable:false,
 		zoomControl: false,
