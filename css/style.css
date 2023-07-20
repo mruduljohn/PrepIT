@@ -3618,10 +3618,10 @@ a.ed_getinvolved:hover i{
 }
 /*------- course page end ---------*/
 /*------- contact page end ---------*/
-.ed_contact_form {
-    float: left;
-    width: 62%;
-    background: #ffffff;
+.ed_contact_form{
+	float:left;
+	width:100%;
+	background:#ffffff;
 }
 .ed_contact_form .form-control{
 	color:#000000;
