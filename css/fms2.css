@@ -4,18 +4,17 @@ body {
     font-family: 'Roboto', sans-serif;}
   
   .Sem {
-    bottom: 50px;
+    
     font-family: 'Roboto', sans-serif;
-    background-color: #e7ffec;
-    color: #000000;
-    font-size: 70%;
-    font-weight: bold;
+    background-color: #237fdb;
+    color: #ffffff;
+    font-size: 80%;
+    
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 2rem;
-    width: 150px;
-    height: 50px;
-    /* margin: 50px; */
+    width: 130px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,13 +34,14 @@ body {
     position: relative;
     flex-direction: column;
     align-items: center;
+    margin: 30px;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #dffeeb;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    background-color: #4d87cd;
+    box-shadow: 0px 7px 10px rgba(255, 255, 255, 0.5);
     z-index: 1;
     border-radius: 10px;
     opacity: 0;
@@ -52,22 +52,25 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
+    
     transform: translateY(0);
     transition-delay: 5s; 
   }
   
   .dropdown-content a {
-    color: rgb(45, 87, 26);
-    padding: 12px 16px;
+    color: rgb(255, 255, 255);
+    
+    padding: 2px 24px;
     text-decoration: none;
     display: block;
     font-size: medium;
     font-family: 'Times New Roman', Times, serif;
     transition: background-color 0.3s ease;
+    
   }
   
   .dropdown-content a:hover {
-    background-color: #b9f09d;
+    background-color: #7994ca;
     border-radius: 10px;
   }
   
@@ -83,22 +86,30 @@ body {
   }
   
   .back-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: rgb(3, 0, 0);
-    padding: 5px;
-    font-weight: bold;
-    border-radius: 20%;
-    text-transform: uppercase;
-    background-color: rgb(201, 125, 125);
-    text-decoration: none;
-  }
+   
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: 0.2s ease-out;
+      box-shadow: 6px 4px 69px rgba(0, 0, 0, 0.5);
+      margin-right: 48.5%; 
+
+    }
   
-  .container {
+  
+.noteSection{
+  display: flex;
+  justify-content: center;
+}
+
+  .container1 {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 2 columns */
     grid-template-rows: repeat(2, 1fr); /* 4 rows */
-    gap: 5px; /* Gap between grid items */
+     /* Gap between grid items */
     justify-items: center;
   }
