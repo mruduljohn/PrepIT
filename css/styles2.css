@@ -180,3 +180,9 @@ input[type="submit"]:active
     height: calc(20vw - 2px);
   }
 }
+.register
+{
+color: #fff;
+padding: 10px;
+
+}
