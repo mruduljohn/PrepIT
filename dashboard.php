@@ -326,7 +326,32 @@ if (isset($_SESSION['username'])) {
 ?>
 
 													</td>
-												</tr>												
+												</tr>	
+												<tr>
+													<td>
+													<?php
+													// Check if the username is set in the session
+													if (isset($_SESSION['username'])) {
+    													$username = $_SESSION['username'];
+    													
+													} 
+													?>
+													<form action="delete_user.php" method="POST">
+    												<!-- Display the username -->
+    												<?php
+   													 // Check if the username is set in the session
+    												if (isset($_SESSION['username'])) {
+        											$username = $_SESSION['username'];
+        											
+        											// Add a hidden input field to pass the username to the delete_user.php script
+        											echo '<input type="hidden" name="username" value="' . $username . '">';
+    												} 
+    												?>
+    												<!-- Add any other form fields or buttons here if needed -->
+    												<input type="submit" value="Delete">
+													</form>
+													</td>
+												</tr>											
 											</tbody>
 										</table>
 									</div>
