@@ -151,10 +151,15 @@
                     echo "<a href='#' style='color: #002147;'>DSA Full Mark Video</a>";
                 } elseif ($subject === 'DSA' && $firstLetter === 'P') {
                     echo "<a href='#' style='color: #002147;'>DSA Pass Mark Video</a>";
-                } else {
+                } elseif ($subject === 'DBMS' && $firstLetter === 'F') {
+                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Full Mark Video</a>";
+                } elseif ($subject === 'DBMS' && $firstLetter === 'P') {
+                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Pass Mark Video</a>";
+                }
+                 else {
                     echo "No content available for this subject.<br>";
-                    echo "Subject: " . $subject . "<br>";
-                    echo "First Letter: " . $firstLetter . "<br>";
+                    //echo "Subject: " . $subject . "<br>";
+                    //echo "First Letter: " . $firstLetter . "<br>";
                 }
                 
                 // Close the database connection
