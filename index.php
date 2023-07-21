@@ -30,7 +30,7 @@
 <header id="ed_header_wrapper">
 	<div class="ed_header_top">
 		<div class="container">
-			<div class="row" style="color: rgb(3, 3, 96);">
+			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<p>Welcome to New session of Education</p>
 					<div class="ed_info_wrapper">
@@ -48,11 +48,11 @@
 			</div>
 		</div>
 	</div>
-    
+	<div class="ed_header_bottom">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div class="prepit_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+					<div class="educo_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8">
 					<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
@@ -69,14 +69,16 @@
 								</ul>
 							</li>
 							<li><a href="contact.html">Contact</a></li>
-
+							
 						</ul>
 					</div>
-					
 				</div>
-
-				
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<div class="educo_call"><i class="fa fa-phone"></i><a href="#">9876543210</a></div>
+				</div>
+			</div>
 		</div>
+    </div>
     
 </header>
 <!--header end -->

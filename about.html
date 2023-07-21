@@ -16,51 +16,68 @@
 <body>
 
 <div id="educo_wrapper">
-<header id="ed_header_wrapper">
-	<div class="ed_header_top">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<p>Welcome to New Session of Education</p>
-					<div class="ed_info_wrapper">
-						<a href="login.html" id="login_button">LOGIN</a>
+	<header id="ed_header_wrapper">
+		<div class="ed_header_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<p>welcome to new session of education</p>
+						<div class="ed_info_wrapper">
+							<a href="login.html" id="login_button">Login</a>
+								<div id="login_one" class="ed_login_form">
+									<h3>log in</h3>
+									<form class="form">
+										<div class="form-group">
+											<label class="control-label">Email :</label>
+											<input type="text" class="form-control" >
+										</div>
+										<div class="form-group">
+											<label  class="control-label">Password :</label>
+											<input type="password" class="form-control">
+										</div>
+										<div class="form-group">
+											<button type="submit">login</button>
+											<a href="signup.html">registration</a>	
+										</div>
+									</form>
+								</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="ed_header_bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2 col-md-2 col-sm-2">
-            <div class="prepit_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
-          </div>
-          <div class="col-lg-8 col-md-8 col-sm-8">
-			<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
+		<div class="ed_header_bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="educo_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8">
+						<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
+						</div>
+						<div class="edoco_menu">
+							<ul class="collapse navbar-collapse" id="ed_menu">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.html">about us</a></li>
+								<li><a href="#">courses</a>
+									<ul class="sub-menu">
+										<li><a href="#">fullmark oriented study</a></li>
+										<li><a href="#">passmark oriented study</a></li>
+	
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="educo_call"><i class="fa fa-phone"></i><a href="#">9876543210</a></div>
+					</div>
+				</div>
 			</div>
-          <div class="edoco_menu">
-            <ul class="collapse navbar-collapse" id="ed_menu">
-              <li><a href="#">Home</a>
-				<ul class="sub-menu">
-					<li><a href="index.php">Home</a>
-                </ul>
-			  </li>
-			  <li><a href="about.html">about us</a></li>
-              <li><a href="#">courses</a>
-				<ul class="sub-menu">
-					<li><a href="login.html">fullmark oriented study</a></li>
-					<li><a href="login.html">passmark oriented study</a></li>
-
-				</ul>
-			  </li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>	
-  </header>
+		</div>
+	</header>
 <!--header end -->
 <!--Breadcrumb start-->
 <div class="ed_pagetitle">
