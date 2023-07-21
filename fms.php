@@ -244,7 +244,7 @@
 
 </div>  
 <div class="ed_info_wrapper a, back-button width">
-<a class="back-button href="dashboard.php"">Back</a>
+<a class="back-button" href="dashboard.php">Back</a>
 </div>
     
     <!-- Bootstrap JS -->
