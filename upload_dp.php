@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>upload DP</title>
-    <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
 
 </head>
 

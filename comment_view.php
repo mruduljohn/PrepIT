@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
     <title>Comments</title>
     <style>
         .comment {

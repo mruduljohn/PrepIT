@@ -4,7 +4,7 @@
     <title>Resources</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="css/resource.css" type="text/css"> -->
-    <link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
     <style>
         body {
             background-color: #f8f9fa;

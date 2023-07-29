@@ -2,7 +2,7 @@
 <html lang="en">
 
 <body>
-<link rel="shortcut icon" type="image/png" href="images/header/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
 
 
 <style>
