@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO notes (file_name, file_path, file_type, file_size, subject,orient) VALUES ('$file_name', '$file_path', '$file_type', '$file_size', '$subject','$firstLetter')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "File uploaded successfully.";
+            echo "File $file_name uploaded successfully.";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

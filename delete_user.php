@@ -23,7 +23,7 @@ if (isset($_POST['username'])) {
         // Deletion successful
         echo "User with username $username has been deleted successfully.";
         echo '<br>';
-        echo '<a href="index.html"><button>Back to Home</button></a>';
+        echo '<a href="index.php"><button>Back to Home</button></a>';
     } else {
         // Error in deletion
         echo "Error deleting user: " . mysqli_error($conn);
