@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_query($conn, $sql)) {
             $message = "Thank you for subscribing to our newsletter!";
             echo $message;
-            sleep(2);
+            sleep(4);
             header("Location: index.php");
         } else {
             $message = "Error: " . $sql . "<br>" . mysqli_error($conn);
