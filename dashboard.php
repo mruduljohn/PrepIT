@@ -139,7 +139,7 @@
 											<div class="ed_mostrecomeded_course_slider">
 												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
 													<div class="ed_item_img">
-														<img src="https://tse1.mm.bing.net/th?id=OIP.4vyBVBrIvRk1bkFUoS0DGAAAAA&pid=Api&P=0&h=180" alt="item1" class="img-responsive">
+														<img src="images/fullmark.png" alt="item1" class="img-responsive">
 													</div>
 													<div class="ed_item_description ed_most_recomended_data">
 															<h4><a href="fms.php">Full mark oriented study</a></h4>
@@ -174,7 +174,7 @@
 												</div>
 												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
 													<div class="ed_item_img">
-														<img src="https://tse1.mm.bing.net/th?id=OIP.L3Dl2NPvbqIey9dkI-z-pwHaFL&pid=Api&P=0&h=180" alt="item1" class="img-responsive">
+														<img src="images/passmark.png" alt="item1" class="img-responsive">
 													</div>
 													<div class="ed_item_description ed_most_recomended_data">
 															<h4><a href="pms.php">Pass mark oriented study</a></h4>

@@ -284,10 +284,10 @@
 					<div class="owl-carousel owl-theme" style="width:1000px;">
 						<div class="item"style="width:250px;margin: left 10%;">
 							<div class="ed_item_img">
-								<img src="https://1.bp.blogspot.com/-M85zFIMA3Vg/Xllh2eNUDpI/AAAAAAAABak/fhSUpug6K0gkhlaVu_kvGvD-nGMN3sTTQCLcBGAsYHQ/s320/Full-Mark-Logo.png" alt="item2" class="img-responsive">
+								<img src="images/fullmark.png" alt="item2" class="img-responsive">
 							</div>
 							<div class="item">
-								<h4>FULL MARK ORIENTED STUDY</h4>
+								<h4>FULL MARK <br>ORIENTED STUDY</h4>
 								<p >By selecting this mode, the student will cover every topic
 									outlined in the syllabus thoroughly</p>
 								<a href="login.html" class="ed_getinvolved">EXPLORE<i class="fa fa-long-arrow-right"></i></a>
@@ -295,10 +295,10 @@
 						</div>
 						<div class="item" style="width: 250px;margin: right 10%;">
 							<div class="ed_item_img">
-								<img src="https://yt3.ggpht.com/a/AATXAJxRkXKfz7VDe53Qz3JpH97CrsPwn6tmlgN1zA=s900-c-k-c0xffffffff-no-rj-mo" alt="item3" class="img-responsive">
+								<img src="images/passmark.png" alt="item3" class="img-responsive">
 							</div>
 							<div class="item">
-								<h4>PASS MARK ORIENTED STUDY</h4>
+								<h4>PASS MARK <br>ORIENTED STUDY</h4>
 								<p >By selecting this mode, the student will go through selected
 									topics that are important and frequently tested in the question
 									paper</p>
