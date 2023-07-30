@@ -422,27 +422,34 @@ if (isset($_SESSION['username'])) {
 									</div>
 									<div role="tabpanel" class="tab-pane" id="change">
 										<div class="ed_dashboard_inner_tab">
+											
+											
+
+											<form action="upload_dp.php" method="POST" enctype="multipart/form-data">
 											<h2>change photo</h2>
-											<form class="ed_tabpersonal"  action="upload_dp.php" method="POST" enctype="multipart/form-data">
 												<div class="form-group">
 												<p>Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed.</p>
 												</div>
 												
 												
 
-  <div class="form-group">
-  <input type="file" name="image">
-  <input class="btn ed_btn ed_orange" type="submit" value="Upload">
-  </div>
-
+  												<div class="form-group">
+ 												<input type="file" name="image">
+  												<input class="btn ed_btn ed_orange" type="submit" value="UPLOAD">
+  												</div>
+											</form>
+  											
 												
+												
+											<form action="delete_dp.php" method="POST">
 												<div class="form-group">
 												<p>If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button.</p>
-												</div>
-												<div class="form-group">
-												<button class="btn ed_btn ed_orange">delete</button>
+												
+												
+												<input class="btn ed_btn ed_orange" type="submit" value="DELETE">
 												</div>
 											</form>
+												
 										</div>
 									</div>
 								</div>
