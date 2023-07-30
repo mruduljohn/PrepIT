@@ -95,6 +95,45 @@
     <?php
     // Start the session
     session_start();
+
+// Establish a database connection
+$servername = "localhost";
+$username_DB = "blablaadmin";
+$password_DB = "bla123bla456";
+$dbname = "prepit_users";
+
+// Create a new connection
+$conn = mysqli_connect($servername, $username_DB, $password_DB, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Retrieve the current username from the session
+if (isset($_SESSION['username'])) {
+    $currentUsername = $_SESSION['username'];
+}
+
+    // Prepare the data for the query to prevent SQL injection (optional, but recommended)
+    $currentUsername = mysqli_real_escape_string($conn, $currentUsername);
+
+    // SQL query to fetch the 'pic_path' based on the current username
+    $sql = "SELECT pic_path FROM users WHERE username = '$currentUsername'";
+
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
+
+    // Check if the query was successful and if any rows were returned
+    if ($result && mysqli_num_rows($result) > 0) {
+        // Fetch the 'pic_path' from the result
+        $row = mysqli_fetch_assoc($result);
+        $pic_path = $row['pic_path'];
+
+        // Set the 'pic_path' value in the session
+        $_SESSION['pic_path'] = $pic_path;
+    }
+	
 	        // Check if the user has uploaded a profile picture
 			if (isset($_SESSION['pic_path']) && !empty($_SESSION['pic_path'])) {
 				$profile_picture = $_SESSION['pic_path'];
