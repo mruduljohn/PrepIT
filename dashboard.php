@@ -120,7 +120,7 @@
 
 						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
 						  <li><a href="#profile" data-toggle="tab">Your Profile</a></li>
-						  <li><a href="#forums" data-toggle="tab">comments</a></li>
+						  <li><a href="#forums" data-toggle="tab">Feedback</a></li>
 						</ul>
 					</div>
 				</div>
@@ -505,7 +505,7 @@ if (isset($_SESSION['username'])) {
 							<div role="tabpanel">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
-									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">Comments</a></li>
+									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">Feedback</a></li>
 								</ul>
 					
 								<!--Section fourteen Contact form start-->
