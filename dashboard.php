@@ -91,27 +91,36 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="ed_sidebar_wrapper">
-					<div class="ed_profile_img">
-					<img src="images/user.png" alt="Dashboard Image" />
-					<?php
-					// Start the session
-					session_start();
+<div class="ed_profile_img">
+    <?php
+    // Start the session
+    session_start();
+	        // Check if the user has uploaded a profile picture
+			if (isset($_SESSION['pic_path']) && !empty($_SESSION['pic_path'])) {
+				$profile_picture = $_SESSION['pic_path'];
+				echo '<img src="' . $profile_picture . '" alt="Profile Picture" />';
+			} else {
+				// If the user has not uploaded a profile picture, display a default image
+				echo '<img src="images/user.png" alt="Default Profile Picture" />';
+			}
+			    // Check if the username is set in the session
+				if (isset($_SESSION['username'])) {
+					$username = $_SESSION['username'];
+					echo '<h3>Hello ' . $username . '</h3>';
+				}
 
-					// Check if the username is set in the session
-					if (isset($_SESSION['username'])) {
-						$username = $_SESSION['username'];
-						echo '<h3>Hello ' . $username . '</h3>';
-					} 
-					?>
-				    </div>
-					 <div class="ed_tabs_left">
+
+    ?>
+</div>
+
+					<div class="ed_tabs_left">
 						<ul class="nav nav-tabs">
 						  <li class="active"><a href="#dashboard" data-toggle="tab">dashboard</a></li>
 						  <li><a href="#courses" data-toggle="tab">courses <span>2</span></a></li>
 
 						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
 						  <li><a href="#profile" data-toggle="tab">Your Profile</a></li>
-						  <li><a href="#forums" data-toggle="tab">Feedback</a></li>
+						  <li><a href="#forums" data-toggle="tab">comments</a></li>
 						</ul>
 					</div>
 				</div>
@@ -375,18 +384,18 @@ if (isset($_SESSION['username'])) {
 									<div role="tabpanel" class="tab-pane" id="change">
 										<div class="ed_dashboard_inner_tab">
 											<h2>change photo</h2>
-											<form class="ed_tabpersonal">
+											<form class="ed_tabpersonal"  action="upload_dp.php" method="POST" enctype="multipart/form-data">
 												<div class="form-group">
 												<p>Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed.</p>
 												</div>
 												
 												
-<form action="upload_dp.php" method="POST" enctype="multipart/form-data">
+
   <div class="form-group">
   <input type="file" name="image">
   <input class="btn ed_btn ed_orange" type="submit" value="Upload">
   </div>
-</form>
+
 												
 												<div class="form-group">
 												<p>If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button.</p>
@@ -505,9 +514,9 @@ if (isset($_SESSION['username'])) {
 		<form method="POST" action="submit_comment.php">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="ed_heading_top">
-				<h3 style="text-align: center;">Send us a message</h3>
-			</div>
+				<div class="ed_heading_top">
+					<h3>Send us a message</h3>
+				</div>
 			</div>
 			<div class="ed_contact_form ed_toppadder60">
 				<div class="col-lg-6 col-md-6 col-sm-12">
