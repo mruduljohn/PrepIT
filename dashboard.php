@@ -111,7 +111,7 @@
 
 						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
 						  <li><a href="#profile" data-toggle="tab">Your Profile</a></li>
-						  <li><a href="#forums" data-toggle="tab">comments</a></li>
+						  <li><a href="#forums" data-toggle="tab">Feedback</a></li>
 						</ul>
 					</div>
 				</div>
@@ -505,9 +505,9 @@ if (isset($_SESSION['username'])) {
 		<form method="POST" action="submit_comment.php">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="ed_heading_top">
-					<h3>Send us a message</h3>
-				</div>
+			<div class="ed_heading_top">
+				<h3 style="text-align: center;">Send us a message</h3>
+			</div>
 			</div>
 			<div class="ed_contact_form ed_toppadder60">
 				<div class="col-lg-6 col-md-6 col-sm-12">

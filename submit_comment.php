@@ -26,6 +26,31 @@
         .clear {
             clear: both;
         }
+
+        /* Style for the success message */
+.success-message {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 10px;
+  border: 1px solid #b8daff;
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Style for the error message */
+.error-message {
+  background-color: #f0f7fc;
+  color: #1f3d68;
+  padding: 10px;
+  border: 1px solid #d0e3fc;
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
 </style>
 
 <?php
@@ -58,10 +83,10 @@ if (empty($name) || empty($comment)) {
 $sql = "INSERT INTO comments_table (name, comment,sem,subject) VALUES ('$name', '$comment','$sem','$subject')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Comment submitted successfully!";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
+  echo '<div class="success-message">Comment submitted successfully!</div>';
+} else {
+  echo '<div class="error-message">Error: ' . $sql . '<br>' . $conn->error . '</div>';
+}
 
 // ...
 $conn->close();
