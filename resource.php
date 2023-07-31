@@ -148,13 +148,25 @@
                 } elseif ($subject === "LATT" && $firstLetter === "P") {
                     echo "<a href='https://www.youtube.com/watch?v=kjBOesZCoqc' style='color: #002147;'>Latt Pass Mark Video</a>";
                 } elseif ($subject === 'DSA' && $firstLetter === 'F') {
-                    echo "<a href='#' style='color: #002147;'>DSA Full Mark Video</a>";
+                    echo "<a href='https://youtu.be/AT14lCXuMKI' style='color: #002147;'>Array 1</a><br>";
+                    echo "<a href='https://youtu.be/Bnjbun-hiBk' style='color: #002147;'>Array 2</a><br>";
+                    echo "<a href='https://youtu.be/CMbpZK_xqoc' style='color: #002147;'>Array 3</a><br>";
+                    echo "<a href='https://youtu.be/dmb1i4oN5oE' style='color: #002147;'>Linked List 1</a><br>";
+                    echo "<a href='https://youtu.be/DWpVGpNfDmM' style='color: #002147;'>Linked List 2</a><br>";
+                    echo "<a href='https://youtu.be/qauEA64G1Ds' style='color: #002147;'>Array vs Linked List</a><br>";
+                    echo "<a href='https://youtu.be/bxRVz8zklWM' style='color: #002147;'>Stack Intro</a><br>";
+                    echo "<a href='https://youtu.be/VmsTAVpz0xo' style='color: #002147;'>Stack Using Array</a><br>";
+                    echo "<a href='https://youtu.be/T_UXDTy23DQ' style='color: #002147;'>Stack Using Linked List</a><br>";
+
                 } elseif ($subject === 'DSA' && $firstLetter === 'P') {
-                    echo "<a href='#' style='color: #002147;'>DSA Pass Mark Video</a>";
+                    echo "<a href='https://youtu.be/AT14lCXuMKI' style='color: #002147;'>Array</a><br>";
+                    echo "<a href='https://youtu.be/dmb1i4oN5oE' style='color: #002147;'>Linked List</a><br>";
+                    echo "<a href='https://youtu.be/qauEA64G1Ds' style='color: #002147;'>Array vs Linked List</a><br>";
+                    echo "<a href='https://youtu.be/bxRVz8zklWM' style='color: #002147;'>Stack Intro</a><br>";
                 } elseif ($subject === 'DBMS' && $firstLetter === 'F') {
-                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Full Mark Video</a>";
+                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Full Mark Video</a><br>";
                 } elseif ($subject === 'DBMS' && $firstLetter === 'P') {
-                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Pass Mark Video</a>";
+                    echo "<a href='https://www.youtube.com/watch?v=T7AxM7Vqvaw' style='color: #002147;'>DBMS Pass Mark Video</a><br>";
                 }
                  else {
                     echo "No content available for this subject.<br>";
