@@ -1,5 +1,4 @@
 <?php
-
 // Establish a database connection
 $servername = "localhost";
 $username = "blablaadmin";
@@ -22,12 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Get form data
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    // Query the database
-    $sql = "SELECT * FROM users WHERE username='$username'";
-    $result = mysqli_query($conn, $sql);
+    // Prepare the query using prepared statement
+    $sql = "SELECT * FROM users WHERE username=?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    // Get the result
+    $result = mysqli_stmt_get_result($stmt);
 
     // Check if user exists
     if (mysqli_num_rows($result) == 1) {

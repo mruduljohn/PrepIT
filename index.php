@@ -9,8 +9,19 @@
 <meta name="description"  content="PREPIT"/>
 <!--srart theme style -->
 <link href="css/main.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
 <!-- end theme style -->
-
+<style>
+	form {
+    margin: 10px auto;
+    width: 220px;
+    text-align: left;
+}
+.ed_login_form .form {
+    text-align: left;
+    padding-top: 7px;
+}
+</style>
 </head>
 <body>
 <!--Page main section start-->
@@ -19,30 +30,36 @@
 <header id="ed_header_wrapper">
 	<div class="ed_header_top">
 		<div class="container">
-			<div class="row" style="color: rgb(3, 3, 96);">
+			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<p>Welcome to New session of Education</p>
-					
+					<div class="ed_info_wrapper">
+					<a href="#" id="login_button">Login or Register</a>
+					<div id="login_one" class="ed_login_form">
+						<form class="form">
+							<div class="form-group">
+								<a href="login.html">login</a>
+								<a href="register.html">registration</a>	
+							</div>
+						</form>
+					</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-    
+	<div class="ed_header_bottom">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div class="prepit_logo"> <a href="index.html"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+					<div class="educo_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
 				</div>
 				<div class="col-lg-8 col-md-8 col-sm-8">
 					<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
 					</div>
 					<div class="edoco_menu">
 						<ul class="collapse navbar-collapse" id="ed_menu">
-							<li><a href="#">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Home</a></li>
-								</ul>
-							</li>
+							<li><a href="index.php">Home</a></li>
 							<li><a href="about.html">about us</a></li>
 							<li><a href="#">courses</a>
 								<ul class="sub-menu">
@@ -56,20 +73,12 @@
 						</ul>
 					</div>
 				</div>
-
-				<div class="ed_info_wrapper">
-					<a href="#" id="login_button">Login or Register</a>
-						<div id="login_one" class="ed_login_form">
-							<form class="form">
-								<div class="form-group">
-									<a href="login.html">login</a>
-									<a href="register.html">registration</a>	
-								</div>
-							</form>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<div class="educo_call"><i class="fa fa-phone"></i><a href="#">9876543210</a></div>
 				</div>
-
 			</div>
 		</div>
+    </div>
     
 </header>
 <!--header end -->
@@ -275,10 +284,10 @@
 					<div class="owl-carousel owl-theme" style="width:1000px;">
 						<div class="item"style="width:250px;margin: left 10%;">
 							<div class="ed_item_img">
-								<img src="https://1.bp.blogspot.com/-M85zFIMA3Vg/Xllh2eNUDpI/AAAAAAAABak/fhSUpug6K0gkhlaVu_kvGvD-nGMN3sTTQCLcBGAsYHQ/s320/Full-Mark-Logo.png" alt="item2" class="img-responsive">
+								<img src="images/fullmark.png" alt="item2" class="img-responsive">
 							</div>
 							<div class="item">
-								<h4>FULL MARK ORIENTED STUDY</h4>
+								<h4>FULL MARK <br>ORIENTED STUDY</h4>
 								<p >By selecting this mode, the student will cover every topic
 									outlined in the syllabus thoroughly</p>
 								<a href="login.html" class="ed_getinvolved">EXPLORE<i class="fa fa-long-arrow-right"></i></a>
@@ -286,10 +295,10 @@
 						</div>
 						<div class="item" style="width: 250px;margin: right 10%;">
 							<div class="ed_item_img">
-								<img src="https://yt3.ggpht.com/a/AATXAJxRkXKfz7VDe53Qz3JpH97CrsPwn6tmlgN1zA=s900-c-k-c0xffffffff-no-rj-mo" alt="item3" class="img-responsive">
+								<img src="images/passmark.png" alt="item3" class="img-responsive">
 							</div>
 							<div class="item">
-								<h4>PASS MARK ORIENTED STUDY</h4>
+								<h4>PASS MARK <br>ORIENTED STUDY</h4>
 								<p >By selecting this mode, the student will go through selected
 									topics that are important and frequently tested in the question
 									paper</p>
@@ -304,7 +313,6 @@
 			</div>
 		
     </div><!-- /.container -->
-<!--video_section Section three start -->
 
 
 <!--Page main section end-->

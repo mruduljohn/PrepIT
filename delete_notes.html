@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subject Selection</title>
+    <link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
+</head>
+<body>
+    <style>
+                .back-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #ffffff;
+            background-color: #343a40;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+    </style>
+
+    <h1>Subject Selection</h1>
+
+    <form action="list_files.php" method="post">
+    <label for="selectType">Select Type:</label>
+    <select id="selectType" name="selectType">
+        <option value="F">Full Mark Oriented</option>
+        <option value="P">Pass Mark Oriented</option>
+    </select>
+
+    <br><br>
+
+    <label for="selectSemester">Select Semester:</label>
+    <select id="selectSemester" name="selectSemester">
+        <option value="Sem_1">Semester 1</option>
+        <option value="Sem_2">Semester 2</option>
+        <option value="Sem_3">Semester 3</option>
+        <option value="Sem_4">Semester 4</option>
+        <option value="Sem_5">Semester 5</option>
+        <option value="Sem_6">Semester 6</option>
+        <option value="Sem_7">Semester 7</option>
+        <option value="Sem_8">Semester 8</option>
+        
+    </select>
+
+    <br><br>
+
+    <label for="selectSubjects">Select Subjects:</label>
+    <select id="selectSubjects" name="selectSubjects">
+        <!-- Subjects for Semester 1 -->
+        <option value="subject1">Subject 1</option>
+        <option value="subject2">Subject 2</option>
+        <option value="subject3">Subject 3</option>
+        <option value="subject4">Subject 4</option>
+        <option value="subject5">Subject 5</option>
+        <option value="subject6">Subject 6</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Show Files">
+    </form>
+
+
+    
+    <script>
+        // JavaScript code to handle dynamic subject selection based on the selected semester
+        const selectSemester = document.getElementById('selectSemester');
+        const selectSubjects = document.getElementById('selectSubjects');
+
+        selectSemester.addEventListener('change', function() {
+            const semester = this.value;
+            // Clear existing subjects
+            selectSubjects.innerHTML = '';
+            // Populate subjects based on the selected semester
+            if (semester === 'Sem_1') {
+                populateSubjectsForSemester1();
+            } else if (semester === 'Sem_2') {
+                populateSubjectsForSemester2();
+            } else if (semester === 'Sem_3') {
+                populateSubjectsForSemester3();
+            }
+        });
+
+        function populateSubjectsForSemester1() {
+            const subjectsForSem1 = [
+                'CAL',
+                'PHY',
+                'MEC',
+                'BCE',
+                'BME',
+                'SSD'
+            ];
+            populateSubjects(subjectsForSem1);
+        }
+
+        function populateSubjectsForSemester2() {
+            const subjectsForSem2 = [
+                'CP',
+                'CHE',
+                'GRA',
+                'BEE',
+                'BEC',
+                'EVS'
+            ];
+            populateSubjects(subjectsForSem2);
+        }
+
+        function populateSubjectsForSemester3() {
+            const subjectsForSem3 = [
+                'LATT',
+                'DE.',
+                'DSA',
+                'DBMS',
+                'DCS',
+                'COA'
+            ];
+            populateSubjects(subjectsForSem3);
+        }
+
+        function populateSubjects(subjects) {
+            subjects.forEach((subject) => {
+                const option = document.createElement('option');
+                option.value = subject;
+                option.textContent = subject;
+                selectSubjects.appendChild(option);
+            });
+        }
+    </script>
+    <br><br>
+    <div class="container">
+        <a class="back-button" href="admin_dashboard.php">Back</a>
+    </div>
+</body>
+</html>

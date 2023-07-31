@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>prepIT</title>
+<title>PrepIT</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta name="description"  content="Educo"/>
-<meta name="keywords" content="Educo, html template, Education template" />
-<meta name="author"  content="Kamleshyadav"/>
+<meta name="description"  content="PrepIT"/>
+<meta name="keywords" content="PrepIT" />
+<meta name="author"  content="BlaBla"/>
 <meta name="MobileOptimized" content="320" />
 
 <!--srart theme style -->
 <link href="css/main.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
 <!-- end theme style -->
 </head>
 <body>
@@ -23,12 +24,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
-			<p>welcome to our new session of education</p>
+			<p>Welcome to New Session of Education</p>
 			<div class="ed_info_wrapper">
 				<a href="logout.php" id="login_button">LOGOUT</a>
 				<div id="login_one" class="ed_login_form">
 					<h3>LOGOUT</h3>
-
 				</div>
 			</div>
 		  </div>
@@ -39,35 +39,22 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-2">
-            <div class="prepit_logo"> <a href="index.html"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
+            <div class="prepit_logo"> <a href="index.php"><img src="images/header/prepit_logo.png" alt="logo" /></a> </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-8">
 			<div class="edoco_menu_toggle navbar-toggle" data-toggle="collapse" data-target="#ed_menu">Menu <i class="fa fa-bars"></i>
 			</div>
           <div class="edoco_menu">
             <ul class="collapse navbar-collapse" id="ed_menu">
-              <li><a href="#">Home</a>
-				<ul class="sub-menu">
-					<li><a href="index.php">Home</a>
-                </ul>
-			  </li>
-			  <li><a href="about.html">about us</a></li>
+              <li><a href="index.php">Home</a></li>
+			  <li><a href="about.html">About us</a></li>
               <li><a href="#">courses</a>
 				<ul class="sub-menu">
-					<li><a href="fms.php">fullmark oriented study</a></li>
-					<li><a href="pms.php">passmark oriented study</a></li>
+					<li><a href="fms.php">Fullmark Oriented Study</a></li>
+					<li><a href="pms.php">Passmark Oriented Study</a></li>
 
 				</ul>
 			  </li>
-              <li><a href="#">Pages</a>
-				<ul class="sub-menu">
-					<li><a href="login.html">login page</a></li>
-					<li><a href="register.html">Registration page</a></li>
-					<li><a href="index.php">Student dashboard</a></li>
-					<li><a href="admin_login.php">Admin login</a></li>
-					<li><a href="not_found.html">404 error</a></li>
-				</ul>
-              </li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -84,12 +71,12 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-4 col-sm-6">
 				<div class="page_title">
-					<h2>PrepIT Student</h2>
+					<h2>PrepIT Student Dashboard</h2>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-8 col-sm-6">
 				<ul class="breadcrumb">
-					<li><a href="index.html">home</a></li>
+					<li><a href="index.php">home</a></li>
 					<li><i class="fa fa-chevron-left"></i></li>
 					<li><a href="dashboard.php">PrepIT Student</a></li>
 				</ul>
@@ -104,27 +91,75 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 				<div class="ed_sidebar_wrapper">
-					<div class="ed_profile_img">
-					<img src="images/user.png" alt="Dashboard Image" />
-					<?php
-					// Start the session
-					session_start();
+<div class="ed_profile_img">
+    <?php
+    // Start the session
+    session_start();
 
-					// Check if the username is set in the session
-					if (isset($_SESSION['username'])) {
-						$username = $_SESSION['username'];
-						echo '<p>Hello ' . $username . '</p>';
-					} 
-					?>
-				    </div>
-					 <div class="ed_tabs_left">
+// Establish a database connection
+$servername = "localhost";
+$username_DB = "blablaadmin";
+$password_DB = "bla123bla456";
+$dbname = "prepit_users";
+
+// Create a new connection
+$conn = mysqli_connect($servername, $username_DB, $password_DB, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Retrieve the current username from the session
+if (isset($_SESSION['username'])) {
+    $currentUsername = $_SESSION['username'];
+}
+
+    // Prepare the data for the query to prevent SQL injection (optional, but recommended)
+    $currentUsername = mysqli_real_escape_string($conn, $currentUsername);
+
+    // SQL query to fetch the 'pic_path' based on the current username
+    $sql = "SELECT pic_path FROM users WHERE username = '$currentUsername'";
+
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
+
+    // Check if the query was successful and if any rows were returned
+    if ($result && mysqli_num_rows($result) > 0) {
+        // Fetch the 'pic_path' from the result
+        $row = mysqli_fetch_assoc($result);
+        $pic_path = $row['pic_path'];
+
+        // Set the 'pic_path' value in the session
+        $_SESSION['pic_path'] = $pic_path;
+    }
+	
+	        // Check if the user has uploaded a profile picture
+			if (isset($_SESSION['pic_path']) && !empty($_SESSION['pic_path'])) {
+				$profile_picture = $_SESSION['pic_path'];
+				echo '<img src="' . $profile_picture . '" alt="Profile Picture" />';
+			} else {
+				// If the user has not uploaded a profile picture, display a default image
+				echo '<img src="images/user.png" alt="Default Profile Picture" />';
+			}
+			    // Check if the username is set in the session
+				if (isset($_SESSION['username'])) {
+					$username = $_SESSION['username'];
+					echo '<h3>Hello ' . $username . '</h3>';
+				}
+
+
+    ?>
+</div>
+
+					<div class="ed_tabs_left">
 						<ul class="nav nav-tabs">
 						  <li class="active"><a href="#dashboard" data-toggle="tab">dashboard</a></li>
 						  <li><a href="#courses" data-toggle="tab">courses <span>2</span></a></li>
 
 						  <li><a href="#notification" data-toggle="tab">notifications <span>0</span></a></li>
-						  <li><a href="#profile" data-toggle="tab">share your notes</a></li>
-						  <li><a href="#forums" data-toggle="tab">comments</a></li>
+						  <li><a href="#profile" data-toggle="tab">Your Profile</a></li>
+						  <li><a href="#forums" data-toggle="tab">Feedback</a></li>
 						</ul>
 					</div>
 				</div>
@@ -147,12 +182,12 @@
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane active" id="my">
 									<div class="ed_inner_dashboard_info">
-									<h2>HERE WE HAVE OUR COURSES</h2>
+									<h2>HERE WE HAVE OUR COURSES..</h2>
 										<div class="row">
 											<div class="ed_mostrecomeded_course_slider">
 												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
 													<div class="ed_item_img">
-														<img src="https://tse1.mm.bing.net/th?id=OIP.4vyBVBrIvRk1bkFUoS0DGAAAAA&pid=Api&P=0&h=180" alt="item1" class="img-responsive">
+														<img src="images/fullmark.png" alt="item1" class="img-responsive">
 													</div>
 													<div class="ed_item_description ed_most_recomended_data">
 															<h4><a href="fms.php">Full mark oriented study</a></h4>
@@ -187,7 +222,7 @@
 												</div>
 												<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ed_bottompadder20">
 													<div class="ed_item_img">
-														<img src="https://tse1.mm.bing.net/th?id=OIP.L3Dl2NPvbqIey9dkI-z-pwHaFL&pid=Api&P=0&h=180" alt="item1" class="img-responsive">
+														<img src="images/passmark.png" alt="item1" class="img-responsive">
 													</div>
 													<div class="ed_item_description ed_most_recomended_data">
 															<h4><a href="pms.php">Pass mark oriented study</a></h4>
@@ -281,9 +316,90 @@
 
 											<tbody>
 												<tr>
-													<td>Andre House</td>
-													<td><a href="#">andrehouse@123</a></td>
-												</tr>												
+													<td>
+<?php
+// Check if the username is set in the session
+if (isset($_SESSION['username'])) {
+$username = $_SESSION['username'];
+echo '<h5>' . $username . '</h5>';
+} 
+?>
+													</td>
+													<td>
+<?php
+// Check if the username is set in the session
+if (isset($_SESSION['username'])) {
+    $username_user = $_SESSION['username'];
+
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "blablaadmin";
+    $password = "bla123bla456";
+    $dbname = "prepit_users";
+
+    // Create a new connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Prepare the query to select the email
+    $query = "SELECT email FROM users WHERE username = '$username_user'";
+
+    // Execute the query
+    $result = mysqli_query($conn, $query);
+
+    // Check if the query was successful
+    if ($result) {
+        // Check if any rows were returned
+        if (mysqli_num_rows($result) > 0) {
+            // Fetch the email from the result
+            $row = mysqli_fetch_assoc($result);
+            $email = $row['email'];
+
+            // Display the email
+            echo '<h6><a href="#">' . $email . '</a></h6>';
+        } else {
+            echo "Email not found.";
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    // Close the database connection
+    mysqli_close($conn);
+}
+?>
+
+													</td>
+												</tr>	
+												<tr>
+													<td>
+													<?php
+													// Check if the username is set in the session
+													if (isset($_SESSION['username'])) {
+    													$username = $_SESSION['username'];
+    													
+													} 
+													?>
+													<form action="delete_user.php" method="POST">
+    												<!-- Display the username -->
+    												<?php
+   													 // Check if the username is set in the session
+    												if (isset($_SESSION['username'])) {
+        											$username = $_SESSION['username'];
+        											
+        											// Add a hidden input field to pass the username to the delete_user.php script
+        											echo '<input type="hidden" name="username" value="' . $username . '">';
+    												} 
+    												?>
+    												<!-- Add any other form fields or buttons here if needed -->
+    												<input type="submit" value="Delete">
+													</form>
+													</td>
+												</tr>											
 											</tbody>
 										</table>
 									</div>
@@ -306,24 +422,34 @@
 									</div>
 									<div role="tabpanel" class="tab-pane" id="change">
 										<div class="ed_dashboard_inner_tab">
+											
+											
+
+											<form action="upload_dp.php" method="POST" enctype="multipart/form-data">
 											<h2>change photo</h2>
-											<form class="ed_tabpersonal">
 												<div class="form-group">
 												<p>Click below to select a JPG, GIF or PNG format photo from your computer and then click 'Upload Image' to proceed.</p>
 												</div>
-												<div class="form-group">
-												<input type="file" name="photo" accept="image/*">
-												</div>
-												<div class="form-group">
-												<button class="btn ed_btn ed_green">upload image</button>
-												</div>
+												
+												
+
+  												<div class="form-group">
+ 												<input type="file" name="image">
+  												<input class="btn ed_btn ed_orange" type="submit" value="UPLOAD">
+  												</div>
+											</form>
+  											
+												
+												
+											<form action="delete_dp.php" method="POST">
 												<div class="form-group">
 												<p>If you'd like to delete your current avatar but not upload a new one, please use the delete avatar button.</p>
-												</div>
-												<div class="form-group">
-												<button class="btn ed_btn ed_orange">delete</button>
+												
+												
+												<input class="btn ed_btn ed_orange" type="submit" value="DELETE">
 												</div>
 											</form>
+												
 										</div>
 									</div>
 								</div>
@@ -425,41 +551,48 @@
 							<div role="tabpanel">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
-									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">topics started</a></li>
-									<li role="presentation"><a href="#replies" aria-controls="replies" role="tab" data-toggle="tab">replies created</a></li>
-									<li role="presentation"><a href="#favourite" aria-controls="favourite" role="tab" data-toggle="tab">favourite</a></li>
-									<li role="presentation"><a href="#subscribed" aria-controls="subscribed" role="tab" data-toggle="tab">subscribed</a></li>
+									<li role="presentation" class="active"><a href="#started" aria-controls="started" role="tab" data-toggle="tab">Feedback</a></li>
 								</ul>
 					
-								<!-- Tab panes -->
-								<div class="tab-content">
-									<div role="tabpanel" class="tab-pane active" id="started">
-									<div class="ed_dashboard_inner_tab">
-										<h2>forum topics started</h2>
-										<span>You have not created any topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="replies">
-									<div class="ed_dashboard_inner_tab">
-										<h2>forum replies created</h2>
-										<span>You have not replied to any topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="favourite">
-									<div class="ed_dashboard_inner_tab">
-										<h2>favorite forum topics</h2>
-										<span>You currently have no favourite topics.</span>
-									</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="subscribed">
-									<div class="ed_dashboard_inner_tab">
-										<h2>subscribed forums</h2>
-										<span>You are not currently subscribed to any forums.</span>
-									</div>
-									</div>
-								</div>
-					
-							</div><!--tab End-->
+								<!--Section fourteen Contact form start-->
+<div class="ed_transprentbg ed_toppadder80 ed_bottompadder80">
+	<div class="container">
+		<form method="POST" action="submit_comment.php">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="ed_heading_top">
+				<h3 style="text-align: center;">Send us a message</h3>
+			</div>
+			</div>
+			<div class="ed_contact_form ed_toppadder60">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="form-group">
+					<input type="text" id="name" name="name" class="form-control"  placeholder="Your Name">
+				</div>
+				<div class="form-group">
+					<input type="text" id="sem" name="sem" class="form-control"  placeholder="Your semester">
+				</div>
+				<div class="form-group">
+					<input type="text" id="subject" name="subject" class="form-control"  placeholder="Subject">
+				</div>
+				</div>
+				
+			</div>
+			<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="form-group">
+					<textarea id="comment" name="comment" class="form-control" rows="6" placeholder="Message"></textarea>
+				</div>
+				<button id="ed_submit" class="btn ed_btn ed_orange pull-right">send</button>
+				<p id="err"></p>
+				</div>
+			</div>
+		</div>
+		</form>
+		
+	</div>
+</div>
+<!--Section fourteen Contact form start-->
 						</div>
 					</div>
 				</div>

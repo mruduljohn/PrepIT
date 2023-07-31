@@ -20,6 +20,7 @@ if (isset($_GET['logout'])) {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" type="image/png" href="images/header/prepit_logo book.png" />
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -35,7 +36,7 @@ if (isset($_GET['logout'])) {
         }
 
         .card {
-            height: 250px;
+            height: 350px;
             width: 500px;
             border: none;
             border-radius: 10px;
@@ -78,6 +79,13 @@ if (isset($_GET['logout'])) {
 
                 <div class="text-center">
                     <a href="upload_notes.php" class="btn btn-primary btn-lg mt-4">Upload Notes</a>
+                </div>
+                <div class="text-center">
+                    <a href="delete_notes.html" class="btn btn-primary btn-lg mt-4">Delete Notes</a>
+                </div>
+
+                <div class="text-center">
+                    <a href="comment_view.php" class="btn btn-primary btn-lg mt-4">View comments</a>
                 </div>
 
                 <div class="text-center">
