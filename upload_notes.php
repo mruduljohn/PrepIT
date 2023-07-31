@@ -32,10 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Folder mapping based on the first three letters of the file name
     $folderMapping = array(
-        'F3_Lat' => 'Full_Mark/Sem_3/Latt',
-        'P3_Lat' => 'Pass_Mark/Sem_3/Latt',
+        'F3_LAT' => 'Full_Mark/Sem_3/LATT',
+        'P3_LAT' => 'Pass_Mark/Sem_3/LATT',
         'F3_DSA' => 'Full_Mark/Sem_3/DSA',
         'P3_DSA' => 'Pass_Mark/Sem_3/DSA',
+        'F3_DBM' => 'Full_Mark/Sem_3/DBMS',
+        'P3_DBM' => 'Pass_Mark/Sem_3/DBMS',
+        'F3_DE.' => 'Full_Mark/Sem_3/DE',
+        'P3_DE.' => 'Pass_Mark/Sem_3/DE',
+        'F3_COA' => 'Full_Mark/Sem_3/COA',
+        'P3_COA' => 'Pass_Mark/Sem_3/COA',
+        'F3_DCS' => 'Full_Mark/Sem_3/DCS',
+        'P3_DCS' => 'Pass_Mark/Sem_3/DCS',
         'ghi' => 'folder3'
         // Add more mappings as needed
     );

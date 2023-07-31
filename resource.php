@@ -143,9 +143,9 @@
                 $firstLetter = trim($_GET['firstLetter']);
 
                 // Generate the content based on the subject
-                if ($subject === 'Latt' && $firstLetter === 'F') {
+                if ($subject === 'LATT' && $firstLetter === 'F') {
                     echo "<a href='https://www.youtube.com/watch?v=JnTa9XtvmfI' style='color: #002147;'>Latt Full Mark Video</a>";
-                } elseif ($subject === "Latt" && $firstLetter === "P") {
+                } elseif ($subject === "LATT" && $firstLetter === "P") {
                     echo "<a href='https://www.youtube.com/watch?v=kjBOesZCoqc' style='color: #002147;'>Latt Pass Mark Video</a>";
                 } elseif ($subject === 'DSA' && $firstLetter === 'F') {
                     echo "<a href='#' style='color: #002147;'>DSA Full Mark Video</a>";

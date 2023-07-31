@@ -152,7 +152,7 @@
                         SEM 3
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="sem3Dropdown">
-                        <li><a class="dropdown-item" href="resource.php?subject=Latt & firstLetter=F">Linear Algebra and Transform Techniques</a></li>
+                        <li><a class="dropdown-item" href="resource.php?subject=LATT & firstLetter=F">Linear Algebra and Transform Techniques</a></li>
                         <li><a class="dropdown-item" href="resource.php?subject=DE & firstLetter=F">Digital Electronics</a></li>
                         <li><a class="dropdown-item" href="resource.php?subject=DSA & firstLetter=F">Data Structures and Algorithms</a></li>
                         <li><a class="dropdown-item" href="resource.php?subject=DBMS & firstLetter=F">Database Management System</a></li>
